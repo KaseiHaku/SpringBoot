@@ -47,10 +47,9 @@ dependencies {
 
 
     /** TODO ORM */
-    // implementation group: 'org.mybatis.spring.boot', name: 'mybatis-spring-boot-starter', version: '2.1.1'
-    // implementation group: 'org.mybatis', name: 'mybatis'
-    // implementation group: 'org.mybatis.dynamic-sql', name: 'mybatis-dynamic-sql', version: '1.1.4'
-    //implementation group: 'hikari-cp', name: 'hikari-cp', version: '2.9.0'
+    implementation group: 'org.mybatis.spring.boot', name: 'mybatis-spring-boot-starter', version: '2.1.1'
+    implementation group: 'org.mybatis', name: 'mybatis', version: '3.5.3'
+    implementation group: 'org.mybatis.dynamic-sql', name: 'mybatis-dynamic-sql', version: '1.1.4'
     
 
     /** TODO 测试 */

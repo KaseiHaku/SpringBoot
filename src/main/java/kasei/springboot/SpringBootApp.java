@@ -6,13 +6,16 @@ import kasei.springboot.app.config.MainConfig;
 import kasei.springboot.app.listener.CustomApplicationListener;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Import;
 
 import java.util.List;
 
 
-@SpringBootApplication
+@SpringBootApplication(exclude = {
+    DataSourceAutoConfiguration.class
+})
 @Import(MainConfig.class)
 public class SpringBootApp {
 
