@@ -6,6 +6,9 @@ import org.springframework.context.annotation.Import;
 
 @Configuration
 @EnableConfigurationProperties
-@Import({PrimaryDataSourceConfig.class})
+@Import({
+    //PrimaryDataSourceConfig.class,
+    SlaverDataSourceConfig.class
+})
 public class MainConfig {
 }

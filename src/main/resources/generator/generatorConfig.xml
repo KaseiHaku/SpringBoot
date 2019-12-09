@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+
+    <!--
+        使用方式：
+            shell> java -jar mybatis-generator-core-x.x.x.jar -configfile generatorConfig.xml -overwrite
+    -->
+
+    <!-- 0~1 -->
+    <!-- 主要用于引入外部文件的属性 -->
+    <!--<properties />-->
+
+    <!-- 0~n -->
+    <!-- 引入到运行 shell> java -jar mybatis-generator-core-x.x.x.jar -configfile generatorConfig.xml 时 -classpath 参数中的目录，即 generator 所依赖的包 -->
+    <classPathEntry location="E:\Git\GitLocalRepository\mobilebpm\lib\ojdbc8.jar"/>
+
+
+    <!-- 1~n -->
+    <context id="primaryDbGenerator" targetRuntime="MyBatis3DynamicSql">
+        <property name="javaFileEncoding" value="utf-8"/>
+        <property name="targetJava8" value="true"/>
+
+        <commentGenerator>
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+
+
+
+        <connectionFactory>
+            <property name="driverClass" value="oracle.jdbc.OracleDriver"/>
+            <property name="connectionURL" value="jdbc:oracle:thin:@//10.63.29.99:1521/BPM12CTS"/>
+            <property name="userId" value="bpm_issue"/>
+            <property name="password" value="1234"/>
+            <property name="arbitrary" value="其他 jdbc driver properties"/>
+        </connectionFactory>
+
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="true"/>
+        </javaTypeResolver>
+
+
+        <!-- 指定 *MapperImpl.java 保存路径 -->
+        <javaModelGenerator targetPackage="com.h3c.mobilebpm.repository.primary.entity"
+                            targetProject="E:\Git\GitLocalRepository\mobilebpm\src\main\java">
+            <property name="constructorBased" value="true" />
+            <!-- 根据数据库不同的 schema 生成不同的子包 -->
+            <property name="enableSubPackages" value="true" />
+            <property name="trimStrings" value="true" />
+            <!-- 案例代码保存路径 -->
+            <property name="exampleTargetProject" value="E:\Git\GitLocalRepository\mobilebpm\src\main\java" />
+            <property name="exampleTargetPackage" value="com.h3c.mobilebpm.repository.primary.entity.example" />
+            <!-- 如果一个数据库表存在主键，那么将指定的类当做生成类的主键 -->
+            <!--<property name="rootClass" value="" />-->
+        </javaModelGenerator>
+
+        <!-- 指定 *Mapper.xml 保存路径 -->
+        <sqlMapGenerator targetPackage="com.h3c.mobilebpm.repository.primary.mapper.xml"
+                         targetProject="E:\Git\GitLocalRepository\mobilebpm\src\main\java">
+            <property name="enableSubPackages" value="true" />
+        </sqlMapGenerator>
+
+        <!-- 指定 *Mapper.java 保存路径 -->
+        <javaClientGenerator targetPackage="com.h3c.mobilebpm.repository.primary.mapper"
+                             targetProject="E:\Git\GitLocalRepository\mobilebpm\src\main\java" type="XMLMAPPER">
+            <property name="enableSubPackages" value="true" />
+        </javaClientGenerator>
+
+
+        <table tableName="h3c10N013_Approver">
+            <property name="useActualColumnNames" value="true"/>
+        </table>
+<!--        <table tableName="h3c10N013_Detail"></table>-->
+    </context>
+</generatorConfiguration>

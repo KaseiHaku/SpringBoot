@@ -16,7 +16,6 @@ import java.util.List;
 @SpringBootApplication(exclude = {
     DataSourceAutoConfiguration.class
 })
-@Import(MainConfig.class)
 public class SpringBootApp {
 
     public static void main(String[] args) {

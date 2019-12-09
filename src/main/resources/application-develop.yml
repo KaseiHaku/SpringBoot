@@ -53,3 +53,9 @@ spring:
       username: bpm_issue
       password: 1234
       driver-class-name: oracle.jdbc.OracleDriver
+    slaver:
+      jdbc-url: jdbc:mysql://192.168.1.12:3306/kasei?characterEncoding=utf8
+      username: kasei
+      password: kasei
+      driver-class-name: com.mysql.cj.jdbc.Driver
+    
