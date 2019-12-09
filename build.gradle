@@ -29,14 +29,30 @@ repositories {
 
 dependencies {
 
+    /** TODO Local Dependency */
+    implementation fileTree(dir:'src/main/resources/lib', excludes:['**/ignore/**', '**/data/**'])
 
-
+    /** TODO Spring Boot */
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-web'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-webflux'
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-json'
-    
-    
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-hateoas'  // HATEOAS（Hypermedia as the engine of application state）是 REST 架构风格中最复杂的约束
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-log4j2'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-jdbc'
+    compile group: 'org.springframework.boot', name: 'spring-boot-devtools'         // 开发工具，实现 spring boot 项目热部署
+
+
+    /** TODO Logging */
+    testCompile group: 'org.slf4j', name: 'slf4j-log4j12'
+
+
+    /** TODO ORM */
+    // implementation group: 'org.mybatis.spring.boot', name: 'mybatis-spring-boot-starter', version: '2.1.1'
+    // implementation group: 'org.mybatis', name: 'mybatis'
+    // implementation group: 'org.mybatis.dynamic-sql', name: 'mybatis-dynamic-sql', version: '1.1.4'
+    //implementation group: 'hikari-cp', name: 'hikari-cp', version: '2.9.0'
     
 
-    /** todo 测试 */
+    /** TODO 测试 */
     testImplementation group: 'org.springframework.boot', name: 'spring-boot-starter-test'
 }
