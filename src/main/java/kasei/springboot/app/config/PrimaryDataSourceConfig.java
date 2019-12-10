@@ -42,7 +42,7 @@ public class PrimaryDataSourceConfig {
 
 
         sqlSessionFactoryBean.setMapperLocations(resources); // 注意：语法糖：变长参数：其实就是数组，可以直接传递数组给变长参数
-        //sqlSessionFactoryBean.setTypeAliasesPackage("kasei.springboot.repository.primary.entity");
+        sqlSessionFactoryBean.setTypeAliasesPackage("kasei.springboot.repository.primary.entity");
         return sqlSessionFactoryBean.getObject();
     }
 

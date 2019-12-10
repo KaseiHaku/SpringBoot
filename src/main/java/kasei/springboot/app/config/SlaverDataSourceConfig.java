@@ -40,7 +40,7 @@ public class SlaverDataSourceConfig {
         Resource[] resources = pathMatchingResourcePatternResolver.getResources("classpath:kasei/springboot/repository/slaver/dao/sqlprovider/*Mapper.xml");
 
         sqlSessionFactoryBean.setMapperLocations(resources);
-        //sqlSessionFactoryBean.setTypeAliasesPackage("kasei.springboot.repository.slaver.entity");
+        sqlSessionFactoryBean.setTypeAliasesPackage("kasei.springboot.repository.slaver.entity");
         return sqlSessionFactoryBean.getObject();
     }
 

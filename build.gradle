@@ -54,6 +54,14 @@ dependencies {
     /** TODO mybatis 自动根据数据库表生成代码 */
     runtimeOnly group: 'org.mybatis.generator', name: 'mybatis-generator-core', version: '1.4.0'
     
+    /** TODO Redis */
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-redis-reactive'
+    compile group: 'org.apache.commons', name: 'commons-pool2', version: '2.7.0'
+
+
+    /** TODO Mongo */
+
+    /** TODO Kafka */
 
     /** TODO 测试 */
     testImplementation group: 'org.springframework.boot', name: 'spring-boot-starter-test'

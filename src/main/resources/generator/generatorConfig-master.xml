@@ -7,6 +7,8 @@
     <!--
         使用方式：
             shell> java -jar mybatis-generator-core-x.x.x.jar -configfile generatorConfig.xml -overwrite
+        @trap
+            上面命令 -overwrite 只会覆盖 *Mapper.java 文件，不会覆盖 *Mapper.xml 文件，而是追加，从而导致错误
     -->
 
     <!-- 0~1 -->
