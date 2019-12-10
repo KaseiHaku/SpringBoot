@@ -57,4 +57,5 @@ dependencies {
 
     /** TODO 测试 */
     testImplementation group: 'org.springframework.boot', name: 'spring-boot-starter-test'
+    testCompile group: 'org.junit.platform', name: 'junit-platform-launcher', version: '1.5.2'
 }

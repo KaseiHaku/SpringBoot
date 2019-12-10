@@ -1,26 +1,24 @@
 package kasei.springboot.app.config;
 
-import oracle.jdbc.replay.OracleDataSourceFactory;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.mybatis.spring.annotation.MapperScan;
+import org.mybatis.spring.boot.autoconfigure.SpringBootVFS;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
-import org.springframework.core.io.AbstractFileResolvingResource;
-import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 
 import javax.sql.DataSource;
 
-//@Configuration
-@MapperScan(basePackages = {"kasei.springboot.repository.primary.dao"})
+@Configuration
+@MapperScan(basePackages = {"kasei.springboot.repository.primary.dao.mapper"}, sqlSessionFactoryRef = "primarySqlSessionFactory")
 public class PrimaryDataSourceConfig {
 
     @Bean
@@ -36,10 +34,15 @@ public class PrimaryDataSourceConfig {
     public SqlSessionFactory primarySqlSessionFactory(@Qualifier("primaryDataSource") DataSource dataSource) throws Exception {
         SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
         sqlSessionFactoryBean.setDataSource(dataSource);
+        sqlSessionFactoryBean.setVfs(SpringBootVFS.class); // 虚拟文件系统(VFS),用来读取服务器里的资源
 
-        Resource resource = new PathMatchingResourcePatternResolver().getResource("classpath:kasei/springboot/repository/primary/dao/sqlprovider/*Mapper.xml");
-        sqlSessionFactoryBean.setMapperLocations(resource);
-        sqlSessionFactoryBean.setTypeAliasesPackage("kasei.springboot.repository.primary.entity");
+
+        PathMatchingResourcePatternResolver pathMatchingResourcePatternResolver = new PathMatchingResourcePatternResolver();
+        Resource[] resources = pathMatchingResourcePatternResolver.getResources("classpath:kasei/springboot/repository/primary/dao/sqlprovider/*Mapper.xml");
+
+
+        sqlSessionFactoryBean.setMapperLocations(resources); // 注意：语法糖：变长参数：其实就是数组，可以直接传递数组给变长参数
+        //sqlSessionFactoryBean.setTypeAliasesPackage("kasei.springboot.repository.primary.entity");
         return sqlSessionFactoryBean.getObject();
     }
 
@@ -48,11 +51,6 @@ public class PrimaryDataSourceConfig {
     @Primary
     public DataSourceTransactionManager primaryDataSourceTransactionManager(@Qualifier("primaryDataSource") DataSource dataSource) {
         return new DataSourceTransactionManager(dataSource);
-    }
-
-    @Bean("primarySqlSessionTemplate")
-    public SqlSessionTemplate primarySqlSessionTemplate(@Qualifier("primarySqlSessionFactory") SqlSessionFactory sqlSessionFactory) {
-        return new SqlSessionTemplate(sqlSessionFactory);
     }
 
 
