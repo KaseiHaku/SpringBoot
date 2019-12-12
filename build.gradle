@@ -29,41 +29,61 @@ repositories {
 
 dependencies {
 
+    /** todo Gradle 支持的依赖方式
+     * compileOnly — for dependencies that are necessary to compile your production code but shouldn’t be part of the runtime classpath
+     * implementation (supersedes compile) — used for compilation and runtime
+     * runtimeOnly (supersedes runtime) — only used at runtime, not for compilation
+     * testCompileOnly — same as compileOnly except it’s for the tests
+     * testImplementation — test equivalent of implementation
+     * testRuntimeOnly — test equivalent of runtimeOnly
+     * */
+    
+    
     /** TODO Local Dependency */
     implementation fileTree(dir:'src/main/resources/lib', excludes:['**/ignore/**', '**/data/**'])
 
     /** TODO Spring Boot */
-    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web'
-    compile group: 'org.springframework.boot', name: 'spring-boot-starter-webflux'
-    compile group: 'org.springframework.boot', name: 'spring-boot-starter-json'
-    compile group: 'org.springframework.boot', name: 'spring-boot-starter-hateoas'  // HATEOAS（Hypermedia as the engine of application state）是 REST 架构风格中最复杂的约束
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-webflux'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-json'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-hateoas'  // HATEOAS（Hypermedia as the engine of application state）是 REST 架构风格中最复杂的约束
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-log4j2'
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-jdbc'
-    compile group: 'org.springframework.boot', name: 'spring-boot-devtools'         // 开发工具，实现 spring boot 项目热部署
+    implementation group: 'org.springframework.boot', name: 'spring-boot-devtools'         // 开发工具，实现 spring boot 项目热部署
 
 
     /** TODO Logging */
-    testCompile group: 'org.slf4j', name: 'slf4j-log4j12'
+    testImplementation group: 'org.slf4j', name: 'slf4j-log4j12'
 
 
     /** TODO ORM */
     implementation group: 'org.mybatis.spring.boot', name: 'mybatis-spring-boot-starter', version: '2.1.1'
     implementation group: 'org.mybatis', name: 'mybatis', version: '3.5.3'
     implementation group: 'org.mybatis.dynamic-sql', name: 'mybatis-dynamic-sql', version: '1.1.4'
-    compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.18'
-    /** TODO mybatis 自动根据数据库表生成代码 */
-    runtimeOnly group: 'org.mybatis.generator', name: 'mybatis-generator-core', version: '1.4.0'
+    implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.18'
+    
     
     /** TODO Redis */
-    compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-redis-reactive'
-    compile group: 'org.apache.commons', name: 'commons-pool2', version: '2.7.0'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-redis-reactive'
+    implementation group: 'org.apache.commons', name: 'commons-pool2', version: '2.7.0'
 
 
     /** TODO Mongo */
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-mongodb-reactive'
+    implementation group: 'org.mongodb', name: 'mongo-java-driver', version: '3.12.0'
 
     /** TODO Kafka */
+    implementation group: 'org.springframework.kafka', name: 'spring-kafka', version: '2.3.4.RELEASE'
+
+
+    /** TODO Convenient Develop */
+    // 自动生成 getter setter，而不用写在代码里，需要 IDEA 安装 lombok 插件，并修改 "Settings > Build > Compiler > Annotation Processors" 为 Enable
+    annotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.10' 
+    runtimeOnly group: 'org.mybatis.generator', name: 'mybatis-generator-core', version: '1.4.0' // mybatis 自动根据数据库表生成代码 
+    
 
     /** TODO 测试 */
     testImplementation group: 'org.springframework.boot', name: 'spring-boot-starter-test'
-    testCompile group: 'org.junit.platform', name: 'junit-platform-launcher', version: '1.5.2'
+    testImplementation group: 'org.junit.platform', name: 'junit-platform-launcher', version: '1.5.2'
+    testAnnotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.10'
 }

@@ -5,7 +5,7 @@ spring:
     name: SpringBoot
     description: ${spring.application.name} is my spring boot study project
   profiles:
-    active: develop
+    active: home
 
 
 

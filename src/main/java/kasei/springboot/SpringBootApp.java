@@ -6,6 +6,7 @@ import kasei.springboot.app.listener.CustomApplicationListener;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.ConfigurableApplicationContext;
 
 import java.util.List;
@@ -14,6 +15,7 @@ import java.util.List;
 @SpringBootApplication(exclude = {
     DataSourceAutoConfiguration.class
 })
+//@EnableConfigurationProperties()
 public class SpringBootApp {
 
     public static void main(String[] args) {

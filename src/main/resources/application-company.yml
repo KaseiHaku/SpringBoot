@@ -54,13 +54,10 @@ spring:
       password: 1234
       driver-class-name: oracle.jdbc.OracleDriver
     slaver:
-#      jdbc-url: jdbc:mysql://192.168.1.12:3306/kasei?characterEncoding=utf8&allowMultiQueries=true&serverTimezone=UTC
-#      username: kasei
-#      password: kasei
       jdbc-url: jdbc:mysql://10.90.12.34:3306/ksf?characterEncoding=utf8&allowMultiQueries=true&serverTimezone=UTC
       username: root
       password: mypassword
       driver-class-name: com.mysql.cj.jdbc.Driver
     redis:
       server: 10.98.0.92
-      port:
+      port: 6379
