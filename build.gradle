@@ -60,6 +60,8 @@ dependencies {
     implementation group: 'io.jsonwebtoken', name: 'jjwt', version: '0.9.1'
     
     /** TODO Security */
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-security'
+
     
 
     /** TODO ORM */
@@ -69,8 +71,8 @@ dependencies {
     implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.18'
     
     /** TODO H2 */
-    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa'
     implementation group: 'com.h2database', name: 'h2'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa'
 
     
     
@@ -85,19 +87,22 @@ dependencies {
     
     /** TODO Neo4j */
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-neo4j'
-    //implementation group: 'org.neo4j.driver', name: 'neo4j-java-driver', version: '1.7.5'
+    implementation group: 'org.neo4j', name: 'neo4j-ogm-embedded-driver', version: '3.2.3' // 该依赖存在时 spring boot 自动创建一个 neo4j 实例保存到 IOC 容器中
+    implementation group: 'org.neo4j', name: 'neo4j', version: '3.5.13' // neo4j 嵌入式数据库
     implementation group: 'org.neo4j.driver', name: 'neo4j-java-driver-spring-boot-starter', version: '4.0.0'
-    compile group: 'org.neo4j', name: 'neo4j', version: '3.5.13'
 
 
     /** TODO Kafka */
-    implementation group: 'org.springframework.kafka', name: 'spring-kafka', version: '2.3.4.RELEASE'
+    implementation group: 'org.apache.kafka', name: 'kafka-streams'
+    implementation group: 'org.springframework.kafka', name: 'spring-kafka'
 
 
     /** TODO Convenient Develop */
     // 自动生成 getter setter，而不用写在代码里，需要 IDEA 安装 lombok 插件，并修改 "Settings > Build > Compiler > Annotation Processors" 为 Enable
     annotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.10' 
     runtimeOnly group: 'org.mybatis.generator', name: 'mybatis-generator-core', version: '1.4.0' // mybatis 自动根据数据库表生成代码 
+    // spring data jar 包版本管理父 pom
+    implementation group: 'org.springframework.data', name: 'spring-data-releasetrain', version: 'Moore-SR3', ext: 'pom'
     
 
     /** TODO 测试 */
