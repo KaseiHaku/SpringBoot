@@ -4,6 +4,7 @@ import kasei.springboot.repository.redis.RedisDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.connection.RedisConnection;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 
 import java.nio.charset.Charset;
@@ -11,8 +12,8 @@ import java.nio.charset.Charset;
 @Component
 public class RedisDaoImpl implements RedisDao {
 
-    @Autowired
-    RedisConnectionFactory redisConnectionFactory;
+    @Autowired private RedisTemplate redisTemplate;
+    @Autowired private RedisConnectionFactory redisConnectionFactory;
 
     @Override
     public String getStringValueByKey(String key) {

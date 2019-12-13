@@ -50,17 +50,28 @@ dependencies {
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-log4j2'
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-jdbc'
     implementation group: 'org.springframework.boot', name: 'spring-boot-devtools'         // 开发工具，实现 spring boot 项目热部署
-
+    // spring boot 默认只能注入 yml 里面的配置，引入这个可以注入 .xml 或 .properties 文件的配置，例如：@PropertySource("classpath:your.properties")
+    implementation group: 'org.springframework.boot', name: 'spring-boot-configuration-processor'  
 
     /** TODO Logging */
     testImplementation group: 'org.slf4j', name: 'slf4j-log4j12'
 
+    /** TODO Session: 使用 Token 更好 */
+    implementation group: 'io.jsonwebtoken', name: 'jjwt', version: '0.9.1'
+    
+    /** TODO Security */
+    
 
     /** TODO ORM */
     implementation group: 'org.mybatis.spring.boot', name: 'mybatis-spring-boot-starter', version: '2.1.1'
     implementation group: 'org.mybatis', name: 'mybatis', version: '3.5.3'
     implementation group: 'org.mybatis.dynamic-sql', name: 'mybatis-dynamic-sql', version: '1.1.4'
     implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.18'
+    
+    /** TODO H2 */
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa'
+    implementation group: 'com.h2database', name: 'h2'
+
     
     
     /** TODO Redis */
@@ -71,6 +82,13 @@ dependencies {
     /** TODO Mongo */
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-mongodb-reactive'
     implementation group: 'org.mongodb', name: 'mongo-java-driver', version: '3.12.0'
+    
+    /** TODO Neo4j */
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-neo4j'
+    //implementation group: 'org.neo4j.driver', name: 'neo4j-java-driver', version: '1.7.5'
+    implementation group: 'org.neo4j.driver', name: 'neo4j-java-driver-spring-boot-starter', version: '4.0.0'
+    compile group: 'org.neo4j', name: 'neo4j', version: '3.5.13'
+
 
     /** TODO Kafka */
     implementation group: 'org.springframework.kafka', name: 'spring-kafka', version: '2.3.4.RELEASE'

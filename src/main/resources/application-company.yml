@@ -61,3 +61,12 @@ spring:
     redis:
       server: 10.98.0.92
       port: 6379
+    mongo:
+      uri: mongodb://springcloud:springcloud@10.98.0.92:27017/springcloud
+      neo4j:
+        url: bolt://localhost:7687
+        username: neo4j
+        password: root
+        connection:
+          pool:
+            size: 150
