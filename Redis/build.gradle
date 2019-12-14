@@ -1,0 +1,13 @@
+plugins {
+    id 'java'
+    id 'idea'
+    id 'org.springframework.boot'
+    id 'io.spring.dependency-management'
+}
+
+dependencies {
+    
+    /** TODO Redis */
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-redis-reactive'
+    implementation group: 'org.apache.commons', name: 'commons-pool2', version: '2.7.0'
+}

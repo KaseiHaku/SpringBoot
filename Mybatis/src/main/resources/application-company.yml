@@ -30,19 +30,15 @@ logging:                            # 配置 spring 的日志输出，对业务�
 
 
 spring:
-
   messages:                         # spring 系统消息 i18n 配置
     basename: messages,config.i18n.messages
     encoding: utf-8
     fallback-to-system-locale: false
-
   main:
     lazy-initialization: false
-
   application:
     admin:
       enabled: false  # 开启之后，可以远程管理 spring boot 应用
-
   mvc:
     favicon:
       enabled: false
@@ -51,7 +47,6 @@ spring:
       parameter-name: format        # 用于内容类型协商的参数名
       media-types:
         markdown: text/markdown     # 自定义扩展内容类型
-
   datasource:
     primary:
       jdbc-url: jdbc:oracle:thin:@//10.63.29.99:1521/BPM12CTS
@@ -59,35 +54,7 @@ spring:
       password: 1234
       driver-class-name: oracle.jdbc.OracleDriver
     slaver:
-      jdbc-url: jdbc:mysql://192.168.1.12:3306/kasei?characterEncoding=utf8&allowMultiQueries=true&serverTimezone=UTC
-      username: kasei
-      password: kasei
+      jdbc-url: jdbc:mysql://10.90.12.34:3306/ksf?characterEncoding=utf8&allowMultiQueries=true&serverTimezone=UTC
+      username: root
+      password: mypassword
       driver-class-name: com.mysql.cj.jdbc.Driver
-    redis:
-      server: 127.0.0.1
-      port: 6379
-    
-#    neo4j:
-#      url: bolt://localhost:7687
-#      username: neo4j
-#      password: root
-#      connection:
-#        pool:
-#          size: 150
-    h2:
-      jdbc-url: jdbc:h2:file:E:/Git/GitLocalRepository/SpringBoot/src/main/resources/h2         # 使用本地文件作为数据库
-      #jdbc-url: jdbc:h2:mem:testdb              # 使用内存数据库，项目关闭则数据丢失
-      username: kasei
-      password: kasei
-      driver-class-name: org.h2.Driver
-  data:
-    neo4j:
-      uri: file:///opt/Git/LocalRepository/SpringBoot/src/main/resources/embededdatabase/neo4j/graph.db
-  h2:
-    console:
-      enabled: true
-      path: /h2
-#  kafka:
-#    admin:
-#      client-id:
-#    bootstrap-servers:

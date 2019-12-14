@@ -1,0 +1,14 @@
+plugins {
+    id 'java'
+    id 'idea'
+    id 'org.springframework.boot'
+    id 'io.spring.dependency-management'
+}
+
+dependencies {
+    /** TODO Neo4j */
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-neo4j'
+    implementation group: 'org.neo4j', name: 'neo4j-ogm-embedded-driver', version: '3.2.3' // 该依赖存在时 spring boot 自动创建一个 neo4j 实例保存到 IOC 容器中
+    implementation group: 'org.neo4j', name: 'neo4j', version: '3.5.13' // neo4j 嵌入式数据库
+    implementation group: 'org.neo4j.driver', name: 'neo4j-java-driver-spring-boot-starter', version: '4.0.0'
+}

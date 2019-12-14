@@ -1,0 +1,16 @@
+server:
+  port: 8088
+spring:
+#  datasource:
+#    mongo:
+#      uri: mongodb://springcloudRoot:springcloudRoot@127.0.0.1:27017/springcloud
+
+  data:
+    mongodb:
+      database: springcloud
+      host: 127.0.0.1
+      port: 27017
+      username: springcloudRoot
+      password: springcloudRoot
+    
+      

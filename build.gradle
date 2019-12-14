@@ -1,112 +1,123 @@
+/** TODO 将所有插件定义到 root project，
+ * apply false: 表示将插件添加到所有项目中，除了 root project 
+ * */
 plugins {
-    id 'java'
+    id 'java' 
     id 'idea'
+    // 作用： 引入 gradle 构建 spring boot 项目所需要的 task，且引入的 task 会根据 gradle 中引入的插件动态变化
     id 'org.springframework.boot' version '2.2.2.RELEASE'
+    // 作用： 让 srping boot 来管理各个依赖的版本，而不是手工指定，
+    // 好处： spring boot 管理的各个版本的依赖，都是经过测试的
     id 'io.spring.dependency-management' version "1.0.8.RELEASE"
 }
 
-sourceCompatibility = JavaVersion.VERSION_11        // 项目中代码使用的 JDK 版本
-targetCompatibility = JavaVersion.VERSION_11         // 编译后的 .class 文件的 JDK 版本
-version = '0.0.1'
+
+allprojects {
+
+    apply plugin: 'java'
+    apply plugin: 'io.spring.dependency-management'
+    
+
+    sourceCompatibility = JavaVersion.VERSION_11        // 项目中代码使用的 JDK 版本
+    targetCompatibility = JavaVersion.VERSION_11         // 编译后的 .class 文件的 JDK 版本
+    version = '0.0.1'
+
+    
+    configurations {
+
+        compile.exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'  // 排除掉 spring 默认的日志框架(logback)
+        testCompile.exclude group: 'org.junit.vintage'  // 排除掉 Junit5 兼容 Junit4 的 jar 包
+    }
+
+
+    repositories {
+        maven { url "http://maven.aliyun.com/nexus/content/groups/public" }
+        mavenCentral()
+        jcenter()
+
+    }
+
+
+    dependencies {
+
+        /** todo Gradle 支持的依赖方式
+         * compileOnly — for dependencies that are necessary to compile your production code but shouldn’t be part of the runtime classpath
+         * implementation (supersedes compile) — used for compilation and runtime
+         * runtimeOnly (supersedes runtime) — only used at runtime, not for compilation
+         * testCompileOnly — same as compileOnly except it’s for the tests
+         * testImplementation — test equivalent of implementation
+         * testRuntimeOnly — test equivalent of runtimeOnly
+         * */
+
+
+        
+        /** TODO Spring Boot */
+        implementation group: 'org.springframework.boot', name: 'spring-boot-starter-parent', ext: 'pom'
+        implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web'
+
+        /** TODO Logging */
+        testImplementation group: 'org.slf4j', name: 'slf4j-log4j12'
+        
+        
+        
+        
+        
+        implementation group: 'org.springframework.boot', name: 'spring-boot-starter-log4j2'
+        
+        
+        // spring boot 默认只能注入 yml 里面的配置，引入这个可以注入 .xml 或 .properties 文件的配置，例如：@PropertySource("classpath:your.properties")
+        implementation group: 'org.springframework.boot', name: 'spring-boot-configuration-processor'
+
+        
+
+        
 
 
 
-configurations {
+        
 
-    compile.exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'  // 排除掉 spring 默认的日志框架(logback)
-    testCompile.exclude group: 'org.junit.vintage'  // 排除掉 Junit5 兼容 Junit4 的 jar 包
+        /** TODO H2 */
+        implementation group: 'com.h2database', name: 'h2'
+        implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa'
+
+
+
+        
+
+
+       
+
+       
+
+
+        /** TODO Kafka */
+        implementation group: 'org.apache.kafka', name: 'kafka-streams'
+        implementation group: 'org.springframework.kafka', name: 'spring-kafka'
+
+
+        /** TODO Convenient Develop */
+        // 自动生成 getter setter，而不用写在代码里，需要 IDEA 安装 lombok 插件，并修改 "Settings > Build > Compiler > Annotation Processors" 为 Enable
+        annotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.10'
+        implementation group: 'org.springframework.boot', name: 'spring-boot-devtools'         // 开发工具，实现 spring boot 项目热部署
+
+
+        /** TODO 测试 */
+        testImplementation group: 'org.springframework.boot', name: 'spring-boot-starter-test'
+        testImplementation group: 'org.junit.platform', name: 'junit-platform-launcher', version: '1.5.2'
+        testAnnotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.10'
+    }
 }
 
 
-repositories {
-    maven { url "http://maven.aliyun.com/nexus/content/groups/public" }
-    mavenCentral()
-    jcenter()
-
-}
 
 
 
-dependencies {
-
-    /** todo Gradle 支持的依赖方式
-     * compileOnly — for dependencies that are necessary to compile your production code but shouldn’t be part of the runtime classpath
-     * implementation (supersedes compile) — used for compilation and runtime
-     * runtimeOnly (supersedes runtime) — only used at runtime, not for compilation
-     * testCompileOnly — same as compileOnly except it’s for the tests
-     * testImplementation — test equivalent of implementation
-     * testRuntimeOnly — test equivalent of runtimeOnly
-     * */
-    
-    
-    /** TODO Local Dependency */
-    implementation fileTree(dir:'src/main/resources/lib', excludes:['**/ignore/**', '**/data/**'])
-
-    /** TODO Spring Boot */
-    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web'
-    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-webflux'
-    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-json'
-    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-hateoas'  // HATEOAS（Hypermedia as the engine of application state）是 REST 架构风格中最复杂的约束
-    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-log4j2'
-    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-jdbc'
-    implementation group: 'org.springframework.boot', name: 'spring-boot-devtools'         // 开发工具，实现 spring boot 项目热部署
-    // spring boot 默认只能注入 yml 里面的配置，引入这个可以注入 .xml 或 .properties 文件的配置，例如：@PropertySource("classpath:your.properties")
-    implementation group: 'org.springframework.boot', name: 'spring-boot-configuration-processor'  
-
-    /** TODO Logging */
-    testImplementation group: 'org.slf4j', name: 'slf4j-log4j12'
-
-    /** TODO Session: 使用 Token 更好 */
-    implementation group: 'io.jsonwebtoken', name: 'jjwt', version: '0.9.1'
-    
-    /** TODO Security */
-    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-security'
-
-    
-
-    /** TODO ORM */
-    implementation group: 'org.mybatis.spring.boot', name: 'mybatis-spring-boot-starter', version: '2.1.1'
-    implementation group: 'org.mybatis', name: 'mybatis', version: '3.5.3'
-    implementation group: 'org.mybatis.dynamic-sql', name: 'mybatis-dynamic-sql', version: '1.1.4'
-    implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.18'
-    
-    /** TODO H2 */
-    implementation group: 'com.h2database', name: 'h2'
-    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa'
-
-    
-    
-    /** TODO Redis */
-    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-redis-reactive'
-    implementation group: 'org.apache.commons', name: 'commons-pool2', version: '2.7.0'
 
 
-    /** TODO Mongo */
-    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-mongodb-reactive'
-    implementation group: 'org.mongodb', name: 'mongo-java-driver', version: '3.12.0'
-    
-    /** TODO Neo4j */
-    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-neo4j'
-    implementation group: 'org.neo4j', name: 'neo4j-ogm-embedded-driver', version: '3.2.3' // 该依赖存在时 spring boot 自动创建一个 neo4j 实例保存到 IOC 容器中
-    implementation group: 'org.neo4j', name: 'neo4j', version: '3.5.13' // neo4j 嵌入式数据库
-    implementation group: 'org.neo4j.driver', name: 'neo4j-java-driver-spring-boot-starter', version: '4.0.0'
 
 
-    /** TODO Kafka */
-    implementation group: 'org.apache.kafka', name: 'kafka-streams'
-    implementation group: 'org.springframework.kafka', name: 'spring-kafka'
 
 
-    /** TODO Convenient Develop */
-    // 自动生成 getter setter，而不用写在代码里，需要 IDEA 安装 lombok 插件，并修改 "Settings > Build > Compiler > Annotation Processors" 为 Enable
-    annotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.10' 
-    runtimeOnly group: 'org.mybatis.generator', name: 'mybatis-generator-core', version: '1.4.0' // mybatis 自动根据数据库表生成代码 
-    // spring data jar 包版本管理父 pom
-    implementation group: 'org.springframework.data', name: 'spring-data-releasetrain', version: 'Moore-SR3', ext: 'pom'
-    
 
-    /** TODO 测试 */
-    testImplementation group: 'org.springframework.boot', name: 'spring-boot-starter-test'
-    testImplementation group: 'org.junit.platform', name: 'junit-platform-launcher', version: '1.5.2'
-    testAnnotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.10'
-}
+
+

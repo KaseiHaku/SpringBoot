@@ -1,0 +1,6 @@
+server:
+  port: 8088
+spring:
+  datasource:
+    mongo:
+      uri: mongodb://springcloud:springcloud@10.98.0.92:27017/springcloud
