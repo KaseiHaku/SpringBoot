@@ -21,8 +21,8 @@ allprojects {
     sourceCompatibility = JavaVersion.VERSION_11        // 项目中代码使用的 JDK 版本
     targetCompatibility = JavaVersion.VERSION_11         // 编译后的 .class 文件的 JDK 版本
     version = '0.0.1'
-
     
+
     configurations {
 
         compile.exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'  // 排除掉 spring 默认的日志框架(logback)
@@ -49,63 +49,42 @@ allprojects {
          * testRuntimeOnly — test equivalent of runtimeOnly
          * */
 
-
-        
-        /** TODO Spring Boot */
-        implementation group: 'org.springframework.boot', name: 'spring-boot-starter-parent', ext: 'pom'
-        implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web'
-
-        /** TODO Logging */
-        testImplementation group: 'org.slf4j', name: 'slf4j-log4j12'
-        
-        
-        
-        
-        
-        implementation group: 'org.springframework.boot', name: 'spring-boot-starter-log4j2'
-        
-        
-        // spring boot 默认只能注入 yml 里面的配置，引入这个可以注入 .xml 或 .properties 文件的配置，例如：@PropertySource("classpath:your.properties")
-        implementation group: 'org.springframework.boot', name: 'spring-boot-configuration-processor'
-
-        
-
-        
-
-
-
-        
-
-        /** TODO H2 */
-        implementation group: 'com.h2database', name: 'h2'
-        implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa'
-
-
-
-        
-
-
-       
-
-       
-
-
-        /** TODO Kafka */
-        implementation group: 'org.apache.kafka', name: 'kafka-streams'
-        implementation group: 'org.springframework.kafka', name: 'spring-kafka'
-
-
         /** TODO Convenient Develop */
         // 自动生成 getter setter，而不用写在代码里，需要 IDEA 安装 lombok 插件，并修改 "Settings > Build > Compiler > Annotation Processors" 为 Enable
         annotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.10'
         implementation group: 'org.springframework.boot', name: 'spring-boot-devtools'         // 开发工具，实现 spring boot 项目热部署
 
-
         /** TODO 测试 */
         testImplementation group: 'org.springframework.boot', name: 'spring-boot-starter-test'
-        testImplementation group: 'org.junit.platform', name: 'junit-platform-launcher', version: '1.5.2'
-        testAnnotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.10'
+        testImplementation group: 'org.junit.platform', name: 'junit-platform-launcher'
+        
+
+        /** TODO Config */
+        // spring boot 默认只能注入 yml 里面的配置，引入这个可以注入 .xml 或 .properties 文件的配置，例如：@PropertySource("classpath:your.properties")
+        implementation group: 'org.springframework.boot', name: 'spring-boot-configuration-processor'
+
+
+        /** TODO Logging */
+        implementation group: 'org.springframework.boot', name: 'spring-boot-starter-log4j2'
+        testImplementation group: 'org.slf4j', name: 'slf4j-log4j12'
+
+
+        /** TODO Web */
+        implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web'
+        implementation group: 'org.springframework.boot', name: 'spring-boot-starter-webflux'
+        implementation group: 'org.springframework.boot', name: 'spring-boot-starter-json'
+
+        /** TODO Persistence */
+        implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa'
+
+        
+
+        
+
+        
     }
+
+
 }
 
 

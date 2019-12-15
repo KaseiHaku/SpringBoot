@@ -5,8 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
-@SpringBootApplication
-@EnableMongoRepositories(basePackages = {"kasei.boot.mongo.repository.mongo.dao"})
+@SpringBootApplication(exclude = { DataSourceAutoConfiguration.class})
 public class MongoBootApp {
 
     public static void main(String[] args) {

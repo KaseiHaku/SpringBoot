@@ -5,8 +5,12 @@ plugins {
     id 'io.spring.dependency-management'
 }
 
+
 dependencies {
+    
+    
     /** TODO Mongo */
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-mongodb'
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-mongodb-reactive'
-    implementation group: 'org.mongodb', name: 'mongo-java-driver', version: '3.12.0'
+    implementation group: 'org.mongodb', name: 'mongo-java-driver'
 }
