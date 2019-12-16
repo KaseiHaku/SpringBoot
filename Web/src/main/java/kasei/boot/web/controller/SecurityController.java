@@ -1,16 +1,9 @@
 package kasei.boot.web.controller;
 
 import org.springframework.http.MediaType;
-import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.awt.*;
 
 
 @RestController
@@ -23,17 +16,17 @@ public class SecurityController {
 
 
         // todo spring security get current username
-        Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-
-        if (principal instanceof UserDetails) {
-            String username = ((UserDetails)principal).getUsername();
-        } else {
-            String username = principal.toString();
-        }
+        // Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        //
+        // if (principal instanceof UserDetails) {
+        //     String username = ((UserDetails)principal).getUsername();
+        // } else {
+        //     String username = principal.toString();
+        // }
     }
 
 
-    @PostMapping("login")
+   /* @PostMapping("login")
     public void login(String name, String password){
 
         // Authentication 接口表示：一切能表明用户身份的信息的东西，以下简称 -- 身份证
@@ -47,7 +40,7 @@ public class SecurityController {
         SecurityContextHolder.getContext().setAuthentication(response);
 
 
-    }
+    }*/
 
 
 }

@@ -14,3 +14,50 @@ ymlsyntax:
     - 1
     - 2
     - 3
+
+ymlnull: ~          # 相当于 json 中 {"ymlnull": null}
+
+# YAML 各种字符串格式演示
+ymlstr1: str
+
+# '' 中所有转义字符都不生效，除了 ' 自身
+# "str b'ob\n gg"
+ymlstr2: 'str b''ob\n gg'
+
+
+# "" 中转义字符也不生效，但是行末 \ 代表字符串的连续，
+# "aaa\nbbbccc"
+ymlstr3: "aaa\nbbb\
+ ccc\
+ "
+
+# "s\ntr"
+ymlstr4: 's\ntr'       # 注意 \n 不转义，原样输出
+
+# "strRow1 strRow2"
+ymlstr5: strRow1
+ strRow2
+
+# "\nstrRow1\nstrRow2\n"
+ymlstr6: |
+ strRow1
+ strRow2
+ 
+# "strRow1\nstrRow2\n"
+ymlstr7: |+
+  strRow1
+  strRow2
+  
+# "strRow1strRow2"
+ymlstr8: |-
+ strRow1
+ strRow2
+
+# "strRow1 strRow2\n"
+ymlstr9: >
+ strRow1
+ strRow2
+
+# YAML 引用
+ymlref1: &ref refValue
+ymlref2: *ref             # 相当于 ymlref2: refValue
