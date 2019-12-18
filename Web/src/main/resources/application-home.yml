@@ -7,43 +7,17 @@ server:
 
 logging:
   level:
-    root: debug
+    root: warn
 
 spring:
-  security:
-    user:
-      password: kasei
-      name: kasei
-      roles:
-        - root
-  datasource:
-    driver-class-name: org.h2.Driver
-    # 该 url 表示使用的是本地文件数据库，IFEXISTS=TRUE 表示数据库存在时才打开，否则报错
-    # TRACE_LEVEL_SYSTEM_OUT=3        表示日志输出到 System.out 且日志级别为 3 DEBUG, 2 INFO, 1 ERROR, 0 OFF
-    # TRACE_LEVEL_FILE=0              表示日志输出到文件
-    url: "\
-     jdbc:h2:file:./Web/src/main/resources/embededdatabase/h2/db1\
-     ;TRACE_LEVEL_FILE=0\
-     ;TRACE_LEVEL_SYSTEM_OUT=3\
-     ;MODE=MySQL\
-     ;DATABASE_TO_LOWER=TRUE;PAGE_SIZE=2048\
-     ;IFEXISTS=TRUE\
-     "
-    
-    # 该格式的 url 表示创建的是内存数据库
-    # url: jdbc:h2:mem:MyDatabaseName
-    username: root
-    password: root
-    platform: h2
-    # schema: classpath:embededdatabase/h2/schema.sql   # 只适用于首次创建数据库
-    # data: classpath:embededdatabase/h2/data.sql       # 只适用于首次创建数据库
-    
-
+  # JPA 配置，避免需要自己生成数据库表
   jpa:
-    database-platform: org.hibernate.dialect.H2Dialect
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    # database-platform: org.hibernate.dialect.H2Dialect
     generate-ddl: true
     hibernate:
       ddl-auto: update
+      use-new-id-generator-mappings: true
     properties:
       hibernate:
         show_sql: true
@@ -51,6 +25,8 @@ spring:
         format_sql: true
     show-sql: true
     database: h2
+
+  # H2 数据库配置
   h2:
     console:
       enabled: true
@@ -58,3 +34,40 @@ spring:
       settings:
         web-allow-others: true
         trace: false
+  # 数据源配置，用于连接数据库，提供 DataSource 给 JPA 使用
+  datasource:
+    driver-class-name: org.h2.Driver
+    # 该 url 表示使用的是本地文件数据库，IFEXISTS=TRUE 表示数据库存在时才打开，否则报错
+    # TRACE_LEVEL_SYSTEM_OUT=3        表示日志输出到 System.out 且日志级别为 3 DEBUG, 2 INFO, 1 ERROR, 0 OFF
+    # TRACE_LEVEL_FILE=0              表示日志输出到文件
+    url: "\
+       jdbc:h2:file:./Web/src/main/resources/embededdatabase/h2/db1\
+       ;TRACE_LEVEL_FILE=0\
+       ;TRACE_LEVEL_SYSTEM_OUT=3\
+       ;MODE=MySQL\
+       ;DATABASE_TO_LOWER=TRUE;PAGE_SIZE=2048\
+       ;IFEXISTS=TRUE\
+       "
+
+
+    # 该格式的 url 表示创建的是内存数据库
+    # url: jdbc:h2:mem:MyDatabaseName
+    username: root
+    password: root
+    platform: h2
+    # schema: classpath:embededdatabase/h2/schema.sql   # 只适用于首次创建数据库，废弃，已使用 JPA 自动创建数据库表
+    # data: classpath:embededdatabase/h2/data.sql       # 只适用于首次创建数据库，废弃，已使用 JPA 自动创建数据库表
+
+
+
+
+  security:
+    user:
+      password: kasei
+      name: kasei
+      roles:
+        - root
+
+    
+
+

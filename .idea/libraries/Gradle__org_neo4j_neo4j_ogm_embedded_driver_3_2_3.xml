@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.neo4j:neo4j-ogm-embedded-driver:3.2.3">
+    <CLASSES>
+      <root url="jar://E:/Gradle/GradleLocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-ogm-embedded-driver/3.2.3/ffe375176881f2d9a4b24a951d78131ca058eb91/neo4j-ogm-embedded-driver-3.2.3.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://E:/Gradle/GradleLocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-ogm-embedded-driver/3.2.3/558ac62c4e1b25478b61633cf8ca9bf4f4c98d78/neo4j-ogm-embedded-driver-3.2.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

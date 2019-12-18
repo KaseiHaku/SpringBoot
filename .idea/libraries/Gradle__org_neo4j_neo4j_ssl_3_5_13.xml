@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.neo4j:neo4j-ssl:3.5.13">
+    <CLASSES>
+      <root url="jar://E:/Gradle/GradleLocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-ssl/3.5.13/98dc4df3be65700d5dd2a2aa4ee6ba5ea5a9fda5/neo4j-ssl-3.5.13.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://E:/Gradle/GradleLocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-ssl/3.5.13/b7e8bd40f52eb5abab8f5011c408ed3c2eec57e1/neo4j-ssl-3.5.13-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

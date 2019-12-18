@@ -18,7 +18,7 @@ dependencies {
 
 
     /** TODO Security */
-    //implementation group: 'org.springframework.boot', name: 'spring-boot-starter-security'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-security'
 
 
     /** TODO H2 */
