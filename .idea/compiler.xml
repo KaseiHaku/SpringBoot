@@ -1,22 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <annotationProcessing>
-      <profile default="true" name="Default" enabled="true" />
-    </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="Mongo_main" target="11" />
-      <module name="Mongo_test" target="11" />
-      <module name="Mybatis_main" target="11" />
-      <module name="Mybatis_test" target="11" />
-      <module name="Neo4j_main" target="11" />
-      <module name="Neo4j_test" target="11" />
-      <module name="Redis_main" target="11" />
-      <module name="Redis_test" target="11" />
-      <module name="SpringBoot_main" target="11" />
-      <module name="SpringBoot_test" target="11" />
-      <module name="Web_main" target="11" />
-      <module name="Web_test" target="11" />
-    </bytecodeTargetLevel>
+    <option name="DEFAULT_COMPILER" value="Eclipse" />
   </component>
 </project>

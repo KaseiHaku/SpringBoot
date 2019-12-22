@@ -59,7 +59,7 @@ allprojects {
         testImplementation group: 'org.junit.platform', name: 'junit-platform-launcher'
         
 
-        /** TODO Config */
+        /** TODO Config */ 
         // spring boot 默认只能注入 yml 里面的配置，引入这个可以注入 .xml 或 .properties 文件的配置，例如：@PropertySource("classpath:your.properties")
         implementation group: 'org.springframework.boot', name: 'spring-boot-configuration-processor'
 

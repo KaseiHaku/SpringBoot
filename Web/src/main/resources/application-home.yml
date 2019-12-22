@@ -66,8 +66,8 @@ spring:
       password: kasei
       name: kasei
       roles:
-        - root
-
+        - ROLE_ROOT
+  
     
 
 
