@@ -8,9 +8,13 @@ plugins {
 
 dependencies {
 
+    testImplementation group: 'org.springframework.security', name: 'spring-security-test'
+    
+    
+    
+    
+
     /** TODO Spring Boot */
-    
-    
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-hateoas'  // HATEOAS（Hypermedia as the engine of application state）是 REST 架构风格中最复杂的约束
 
     /** TODO Session: 使用 Token 更好 */
@@ -23,5 +27,8 @@ dependencies {
 
     /** TODO H2 */
     implementation group: 'com.h2database', name: 'h2'
+
+
+    
     
 }
