@@ -1,6 +1,8 @@
 package kasei.boot.web;
 
 import org.junit.jupiter.api.Test;
+import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
+import org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration;
 
 
 public class GenerallyTest {
@@ -15,6 +17,8 @@ public class GenerallyTest {
     public void test(){
 
 
+        SecurityAutoConfiguration a;
+        UserDetailsServiceAutoConfiguration b;
 
 
         Ggh x = str -> System.out.println(str);

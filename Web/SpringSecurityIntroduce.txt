@@ -1,0 +1,23 @@
+Authenticate:
+    根据前端传递过来的数据，生成一种对应 Authenticate 认证方式
+    使用 AuthenticationManager 对 Authenticate 进行认证，返回一个完整的 Authenticate
+
+    SpringSecurity 默认提供一个 AuthenticationManager 的实现类 ProviderManager
+
+
+
+    主要接口：
+        Authenticate: 认证方式接口，用于表示一种认证方式
+        AuthenticationManager: 对一个不完整的 Authenticate 进行认证
+        AuthenticateProvider:
+
+
+
+
+
+
+
+Authorize:
+
+
+

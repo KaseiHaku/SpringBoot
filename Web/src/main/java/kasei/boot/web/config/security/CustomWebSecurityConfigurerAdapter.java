@@ -6,7 +6,9 @@ import org.springframework.boot.autoconfigure.security.servlet.UserDetailsServic
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AnonymousAuthenticationProvider;
+import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.AuthenticationProvider;
+import org.springframework.security.authentication.ProviderManager;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -16,6 +18,8 @@ import org.springframework.security.web.authentication.AnonymousAuthenticationFi
 import org.springframework.security.web.util.matcher.RequestMatcher;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -92,6 +96,31 @@ import javax.servlet.http.HttpServletRequest;
 @Configuration // 当有一个自定义的 WebSecurityConfigurerAdapter 类型的 bean 存在于 IOC 容器中时，会关闭 SecurityAutoConfiguration 的自动配置
 @EnableWebSecurity // spring mvc 整合 spring security 必要的注解
 public class CustomWebSecurityConfigurerAdapter extends WebSecurityConfigurerAdapter {
+
+
+    // 自定义个 AuthenticateManager
+    @Bean
+    public AuthenticationManager authenticationManager() {
+
+
+        /** TODO */
+        List<AuthenticationProvider> providers = new ArrayList<>();
+        providers.add(new CustomAuthenticationProvider());
+        providers.add(new AnonymousAuthenticationProvider("foobar"));
+
+
+        /** TODO AuthenticationManager Introduce
+         * 作用： 用于对一个不完整的 Authenticate 进行认证，并返回一个完整的 Authenticate，如果认证出错则抛异常
+         * ProviderManager:
+         *      是 SpringSecurity 自带的 AuthenticationManager 接口的实现类
+         *      作用：逐个使用 AuthenticationProvider 对不完整的 Authenticate 进行认证
+         * */
+        AuthenticationManager manager = new ProviderManager(providers);
+
+        return manager;
+    }
+
+
 
 
     @Bean
