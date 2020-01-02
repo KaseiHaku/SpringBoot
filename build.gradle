@@ -54,9 +54,10 @@ allprojects {
         annotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.10'
         implementation group: 'org.springframework.boot', name: 'spring-boot-devtools'         // 开发工具，实现 spring boot 项目热部署
 
-        /** TODO 测试 */
-        testImplementation group: 'org.springframework.boot', name: 'spring-boot-starter-test'
+        /** TODO Test */
         testImplementation group: 'org.junit.platform', name: 'junit-platform-launcher'
+        testImplementation group: 'org.springframework.boot', name: 'spring-boot-starter-test'
+        testImplementation group: 'org.springframework', name: 'spring-mock', version: '2.0.8'
         
 
         /** TODO Config */ 

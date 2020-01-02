@@ -2,7 +2,7 @@
 rootProject.name = 'SpringBoot'
 
 
-include 'Web'
+include 'Security'
 include 'Mybatis'
 include 'Redis'
 include 'Mongo'

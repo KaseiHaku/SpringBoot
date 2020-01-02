@@ -13,7 +13,7 @@
             <option value="$PROJECT_DIR$/Mybatis" />
             <option value="$PROJECT_DIR$/Neo4j" />
             <option value="$PROJECT_DIR$/Redis" />
-            <option value="$PROJECT_DIR$/Web" />
+            <option value="$PROJECT_DIR$/Security" />
           </set>
         </option>
       </GradleProjectSettings>
