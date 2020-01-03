@@ -29,6 +29,11 @@ dependencies {
     /** TODO H2 */
     implementation group: 'com.h2database', name: 'h2'
 
+    /** TODO ORM */
+    implementation group: 'org.mybatis.spring.boot', name: 'mybatis-spring-boot-starter', version: '2.1.1'
+    implementation group: 'org.mybatis', name: 'mybatis', version: '3.5.3'
+    implementation group: 'org.mybatis.dynamic-sql', name: 'mybatis-dynamic-sql', version: '1.1.4'
+
 
     
     

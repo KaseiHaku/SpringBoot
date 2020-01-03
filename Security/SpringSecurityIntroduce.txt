@@ -22,6 +22,27 @@ CSRF (Cross Site Request Forgery):
 
             幂等的 HTTP 请求有 GET, HEAD, OPTIONS, TRACE
 
+    CSRF 防护类别：
+        1. JSON 请求的防护
+        2. Stateless (RESTful) 应用的防护
+        3. Login
+        4. Logout
+        5. Multipart
+            1. 将 CSRF Token 放到 Body 中； 会产生临时文件，但是无关紧要
+            2. 将 CSRF Token 放到 URL 中； 会导致 Token 泄露
+
+Security HTTP Response Headers:
+    Spring Security 默认 HTTP Response Headers:
+        Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+        Pragma: no-cache
+        Expires: 0
+        X-Content-Type-Options: nosniff
+        Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+        X-Frame-Options: DENY
+        X-XSS-Protection: 1; mode=block
+
+
+
 
 Features:
     1. 阻止  攻击

@@ -1,11 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: org.neo4j.driver:neo4j-java-driver-spring-boot-autoconfigure:4.0.0">
     <CLASSES>
-      <root url="jar://E:/Gradle/GradleLocalRepository/caches/modules-2/files-2.1/org.neo4j.driver/neo4j-java-driver-spring-boot-autoconfigure/4.0.0/539b5185fe11cb83560becff1203516f50b5a8c5/neo4j-java-driver-spring-boot-autoconfigure-4.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Gradle/LocalRepository/caches/modules-2/files-2.1/org.neo4j.driver/neo4j-java-driver-spring-boot-autoconfigure/4.0.0/539b5185fe11cb83560becff1203516f50b5a8c5/neo4j-java-driver-spring-boot-autoconfigure-4.0.0.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://E:/Gradle/GradleLocalRepository/caches/modules-2/files-2.1/org.neo4j.driver/neo4j-java-driver-spring-boot-autoconfigure/4.0.0/319cfde918759cd183489eefce5ca9662b294ef5/neo4j-java-driver-spring-boot-autoconfigure-4.0.0-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Gradle/LocalRepository/caches/modules-2/files-2.1/org.neo4j.driver/neo4j-java-driver-spring-boot-autoconfigure/4.0.0/319cfde918759cd183489eefce5ca9662b294ef5/neo4j-java-driver-spring-boot-autoconfigure-4.0.0-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

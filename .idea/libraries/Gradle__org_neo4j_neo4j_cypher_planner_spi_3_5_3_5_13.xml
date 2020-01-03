@@ -1,11 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: org.neo4j:neo4j-cypher-planner-spi-3.5:3.5.13">
     <CLASSES>
-      <root url="jar://E:/Gradle/GradleLocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-cypher-planner-spi-3.5/3.5.13/9c9366d6e3a8fe3e0eb14885cceafb9026bf889f/neo4j-cypher-planner-spi-3.5-3.5.13.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Gradle/LocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-cypher-planner-spi-3.5/3.5.13/9c9366d6e3a8fe3e0eb14885cceafb9026bf889f/neo4j-cypher-planner-spi-3.5-3.5.13.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://E:/Gradle/GradleLocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-cypher-planner-spi-3.5/3.5.13/91087ff97ba6b0e40297ee50e5821db47957ca5a/neo4j-cypher-planner-spi-3.5-3.5.13-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Gradle/LocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-cypher-planner-spi-3.5/3.5.13/91087ff97ba6b0e40297ee50e5821db47957ca5a/neo4j-cypher-planner-spi-3.5-3.5.13-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

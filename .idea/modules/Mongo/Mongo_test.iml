@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.linked.project.id=":Mongo:test" external.linked.project.path="$MODULE_DIR$/../../../Mongo" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="SpringBoot" external.system.module.type="sourceSet" external.system.module.version="0.0.1" type="JAVA_MODULE" version="4">
+<module version="4">
+  <component name="ExternalSystem" externalSystem="GRADLE" externalSystemModuleGroup="SpringBoot" externalSystemModuleType="sourceSet" externalSystemModuleVersion="0.0.1" linkedProjectId=":Mongo:test" linkedProjectPath="$MODULE_DIR$/../../../Mongo" rootProjectPath="$MODULE_DIR$/../../.." />
   <component name="FacetManager">
     <facet type="Spring" name="Spring">
       <configuration />
@@ -16,6 +17,7 @@
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../../Mongo/src/test">
       <sourceFolder url="file://$MODULE_DIR$/../../../Mongo/src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../Mongo/src/test/resources" type="java-test-resource" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

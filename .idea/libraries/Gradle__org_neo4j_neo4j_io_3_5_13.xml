@@ -1,11 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: org.neo4j:neo4j-io:3.5.13">
     <CLASSES>
-      <root url="jar://E:/Gradle/GradleLocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-io/3.5.13/e6f75e8b0f429df08b56655289f29d96d30c67a4/neo4j-io-3.5.13.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Gradle/LocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-io/3.5.13/e6f75e8b0f429df08b56655289f29d96d30c67a4/neo4j-io-3.5.13.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://E:/Gradle/GradleLocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-io/3.5.13/62c9f9b8a9bf9a5ed10b940c2b45bf8d07b9615e/neo4j-io-3.5.13-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Gradle/LocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-io/3.5.13/62c9f9b8a9bf9a5ed10b940c2b45bf8d07b9615e/neo4j-io-3.5.13-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

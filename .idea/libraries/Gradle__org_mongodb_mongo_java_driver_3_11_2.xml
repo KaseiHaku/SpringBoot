@@ -1,11 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: org.mongodb:mongo-java-driver:3.11.2">
     <CLASSES>
-      <root url="jar://E:/Gradle/GradleLocalRepository/caches/modules-2/files-2.1/org.mongodb/mongo-java-driver/3.11.2/dcf3f0110aecf1ea9f55c1f12e2b6b68d3c48322/mongo-java-driver-3.11.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Gradle/LocalRepository/caches/modules-2/files-2.1/org.mongodb/mongo-java-driver/3.11.2/dcf3f0110aecf1ea9f55c1f12e2b6b68d3c48322/mongo-java-driver-3.11.2.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://E:/Gradle/GradleLocalRepository/caches/modules-2/files-2.1/org.mongodb/mongo-java-driver/3.11.2/6124df4d5dd9483da29e46f04a604b4c1e100e22/mongo-java-driver-3.11.2-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Gradle/LocalRepository/caches/modules-2/files-2.1/org.mongodb/mongo-java-driver/3.11.2/6124df4d5dd9483da29e46f04a604b4c1e100e22/mongo-java-driver-3.11.2-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

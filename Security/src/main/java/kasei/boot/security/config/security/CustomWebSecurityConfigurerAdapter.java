@@ -219,6 +219,10 @@ public class CustomWebSecurityConfigurerAdapter extends WebSecurityConfigurerAda
          * */
         http.headers().frameOptions().sameOrigin();
 
+
+        /** TODO HTTP 协议重定向到 HTTPS 协议 */
+        // http.requiresChannel(channel -> channel.anyRequest().requiresSecure());
+
         http.authorizeRequests().antMatchers("/**").hasRole("USER").and().formLogin();
     }
 

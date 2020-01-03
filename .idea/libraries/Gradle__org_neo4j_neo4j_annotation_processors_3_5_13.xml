@@ -1,11 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: org.neo4j:neo4j-annotation-processors:3.5.13">
     <CLASSES>
-      <root url="jar://E:/Gradle/GradleLocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-annotation-processors/3.5.13/2c02aa7ff359e30c063147797751187c109133dc/neo4j-annotation-processors-3.5.13.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Gradle/LocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-annotation-processors/3.5.13/2c02aa7ff359e30c063147797751187c109133dc/neo4j-annotation-processors-3.5.13.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://E:/Gradle/GradleLocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-annotation-processors/3.5.13/69dce4343b9e2e457cf0f4cd9f8716097b94be3a/neo4j-annotation-processors-3.5.13-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Gradle/LocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-annotation-processors/3.5.13/69dce4343b9e2e457cf0f4cd9f8716097b94be3a/neo4j-annotation-processors-3.5.13-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
