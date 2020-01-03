@@ -7,7 +7,11 @@ server:
 
 logging:
   level:
-    root: warn
+    root: debug
+    org:
+      springframework:
+        web: debug
+        security: debug
 
 spring:
   # JPA 配置，避免需要自己生成数据库表
@@ -67,7 +71,11 @@ spring:
       name: kasei
       roles:
         - ROLE_ROOT
-  
-    
+  jackson:
+    serialization:
+      indent_output: true         # 格式化输出的 json
+
+  mvc:
+    static-path-pattern: /**    # 表示 URL 符合改模式，SpringMVC 会当做静态资源访问
 
 

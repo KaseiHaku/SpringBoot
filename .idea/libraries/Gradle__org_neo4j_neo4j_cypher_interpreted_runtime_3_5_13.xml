@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.neo4j:neo4j-cypher-interpreted-runtime:3.5.13">
+    <CLASSES>
+      <root url="jar://E:/Gradle/GradleLocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-cypher-interpreted-runtime/3.5.13/c37b5583038b5da4833027665677653307a16868/neo4j-cypher-interpreted-runtime-3.5.13.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://E:/Gradle/GradleLocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-cypher-interpreted-runtime/3.5.13/a1d2ce5ce122cbb5335accce2f8645d94ae90c72/neo4j-cypher-interpreted-runtime-3.5.13-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

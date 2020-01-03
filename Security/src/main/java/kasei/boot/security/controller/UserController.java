@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -19,19 +20,6 @@ public class UserController {
 
     @Autowired
     private UserDao userDao;
-
-    @Autowired
-    private ApplicationContext applicationContext;
-
-
-    @GetMapping("/beans")
-    public User getAllUser(){
-        Map<String, Object> beansOfType = applicationContext.getBeansOfType(Object.class);
-        beansOfType.forEach((k,v)-> System.out.println(k));
-
-
-        return null;
-    }
 
 
     @GetMapping("/gg")

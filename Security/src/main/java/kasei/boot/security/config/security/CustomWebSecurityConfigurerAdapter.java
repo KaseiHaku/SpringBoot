@@ -208,15 +208,18 @@ public class CustomWebSecurityConfigurerAdapter extends WebSecurityConfigurerAda
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
-        http
-            .authorizeRequests()
-            .and()
-            .formLogin()
-            .loginPage("/login")
-            .permitAll();
+        /** TODO 关闭对 h2 数据库控制台的 CSRF 保护
+         * CSRF: Cross-site request forgery 跨站请求伪造
+         * */
+        http.csrf().ignoringAntMatchers("/h2-console/**");
 
-        //http.csrf().disable();
-        //http.headers().frameOptions().disable();
+        /** TODO 允许同源网站使用 iframe 嵌入当前页面
+         * Spring Security 默认会在 HTTP Response Header 中添加 X-Frame-Options:DENY
+         * 该头表示不允许当前页面放在 iframe 标签中展示，会导致 h2 控制台显示空白页面
+         * */
+        http.headers().frameOptions().sameOrigin();
+
+        http.authorizeRequests().antMatchers("/**").hasRole("USER").and().formLogin();
     }
 
 

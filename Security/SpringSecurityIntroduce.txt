@@ -1,3 +1,31 @@
+CSRF (Cross Site Request Forgery):
+    什么是 CSRF:
+        当登录一个正常的网站 A，但是没有登出，会话信息仍保存在 Cookie 中，
+        然后用户其他网站 B ，B 通过 JS 直接通过 <form method="POST"> 往 A 网站发请求时，浏览器会自动带上 A 网站的 Cookie，
+        A 网站的服务器根据 Cookie 中的信息，当做是用户的正常请求，然而请求数据却是 B 网站伪造的
+        使用 JS 脚本进行的跨站攻击叫做 XSS(Cross Site Script)
+
+    解决方案：
+        1. Synchronizer Token Pattern:
+            原理：
+                HTTP 请求时不仅要携带 Cookie，还需要携带一个随机的 CSRF Token，
+                服务器收到请求中 Token 后，跟自己保存的 Token 做对比，如果不匹配，那么拒绝该请求
+            要点：
+                CSRF Token 由服务器生成；
+                不要在 GET 请求中携带 CSRF Token，会导致 Token 泄露
+        2. 设置 Cookie 中的 SameSite 属性
+            Set-Cookie: JSESSIONID=randomid; Domain=bank.example.com; Secure; HttpOnly; SameSite=Lax
+
+            SameSite 的值：
+                Strict: 只有同源网站发送的请求才会带上当前 Cookie
+                Lax: 同源网站发送的请求，或者不同源网站发送的 幂等 的 HTTP 请求时，会带上当前 Cookie,
+
+            幂等的 HTTP 请求有 GET, HEAD, OPTIONS, TRACE
+
+
+Features:
+    1. 阻止  攻击
+
 Authenticate:
     根据前端传递过来的数据，生成一种对应 Authenticate 认证方式
     使用 AuthenticationManager 对 Authenticate 进行认证，返回一个完整的 Authenticate
