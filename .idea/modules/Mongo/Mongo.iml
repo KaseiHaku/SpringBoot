@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module version="4">
   <component name="ExternalSystem" externalSystem="GRADLE" externalSystemModuleGroup="SpringBoot" externalSystemModuleVersion="0.0.1" linkedProjectId=":Mongo" linkedProjectPath="$MODULE_DIR$/../../../Mongo" rootProjectPath="$MODULE_DIR$/../../.." />
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../Mongo">
+      <excludeFolder url="file://$MODULE_DIR$/../../../Mongo/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../Mongo/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../Mongo/out" />
+    </content>
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
 </module>

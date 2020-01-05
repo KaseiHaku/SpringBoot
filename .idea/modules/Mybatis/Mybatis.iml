@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module version="4">
   <component name="ExternalSystem" externalSystem="GRADLE" externalSystemModuleGroup="SpringBoot" externalSystemModuleVersion="0.0.1" linkedProjectId=":Mybatis" linkedProjectPath="$MODULE_DIR$/../../../Mybatis" rootProjectPath="$MODULE_DIR$/../../.." />
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../Mybatis">
+      <excludeFolder url="file://$MODULE_DIR$/../../../Mybatis/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../Mybatis/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../Mybatis/out" />
+    </content>
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
 </module>

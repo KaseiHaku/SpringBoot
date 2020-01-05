@@ -44,29 +44,36 @@ Security HTTP Response Headers:
 
 
 
-Features:
-    1. 阻止  攻击
+
 
 Authenticate:
-    根据前端传递过来的数据，生成一种对应 Authenticate 认证方式
-    使用 AuthenticationManager 对 Authenticate 进行认证，返回一个完整的 Authenticate
+    Chief Interface:
+            Authentication: 认证方式接口，用于表示一种认证方式
+            AuthenticationManager: 对一个不完整的 Authentication 进行认证
+            AuthenticateProvider: 表示一个 ProviderManager 里面认证链的节点
 
-    SpringSecurity 默认提供一个 AuthenticationManager 的实现类 ProviderManager
+    Major Class:
+        ProviderManager:
+            SpringSecurity 默认提供的一个 AuthenticationManager 的实现类,
+            该实现类提供一种链式的认证方式，可以使用 parent 构建 ProviderManager 层级关系
+        AuthenticationManagerBuilder: 用于构建自定义的 AuthenticationManager
 
-
-
-    主要接口：
-        Authenticate: 认证方式接口，用于表示一种认证方式
-        AuthenticationManager: 对一个不完整的 Authenticate 进行认证
-        AuthenticateProvider:
-
-
-
-
+    Authenticate Procedure:
+        根据前端传递过来的数据，生成一种对应 Authenticate 认证方式
+        使用 AuthenticationManager 对 Authenticate 进行认证，返回一个完整的 Authenticate
 
 
 
 Authorize:
+    Principal Interface:
+        AccessDecisionManager: 对一个完整的 Authentication 进行鉴权
+        AccessDecisionVoter: 对某一个 Authority 进行投票，有三种票： 赞同票，反对票，弃权票
+        ConfigAttributes: 代表一个被装饰过的受控资源
 
+    Primary Class:
+        AffirmativeBased: spring security 提供的一个 AccessDecisionManager
+
+    Authorize Procedure:
+        将当前的 Authentication
 
 
