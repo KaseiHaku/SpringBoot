@@ -70,7 +70,7 @@ spring:
       password: kasei
       name: kasei
       roles:
-        - ROLE_ROOT
+        - USER
   jackson:
     serialization:
       indent_output: true         # 格式化输出的 json

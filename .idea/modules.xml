@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/LocalRepository-SpringBoot.iml" filepath="$PROJECT_DIR$/.idea/modules/LocalRepository-SpringBoot.iml" group="SpringBoot" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Mongo/Mongo.iml" filepath="$PROJECT_DIR$/.idea/modules/Mongo/Mongo.iml" group="SpringBoot/Mongo" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Mongo/Mongo_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Mongo/Mongo_main.iml" group="SpringBoot/Mongo" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Mongo/Mongo_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Mongo/Mongo_test.iml" group="SpringBoot/Mongo" />
@@ -18,7 +17,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Security/Security.iml" filepath="$PROJECT_DIR$/.idea/modules/Security/Security.iml" group="SpringBoot/Security" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Security/Security_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Security/Security_main.iml" group="SpringBoot/Security" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Security/Security_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Security/Security_test.iml" group="SpringBoot/Security" />
-      <module fileurl="file://$PROJECT_DIR$/SpringBoot.iml" filepath="$PROJECT_DIR$/SpringBoot.iml" group="SpringBoot" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/SpringBoot.iml" filepath="$PROJECT_DIR$/.idea/SpringBoot.iml" group="SpringBoot" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringBoot_main.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringBoot_main.iml" group="SpringBoot" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringBoot_test.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringBoot_test.iml" group="SpringBoot" />
     </modules>

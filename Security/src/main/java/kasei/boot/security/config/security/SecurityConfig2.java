@@ -1,5 +1,6 @@
-package kasei.boot.security.config.security;
+package kasei.boot.security.config;
 
+import kasei.boot.security.config.security.CustomAuthenticationProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.security.SecurityProperties;
 import org.springframework.context.annotation.Bean;
@@ -16,81 +17,18 @@ import org.springframework.security.web.authentication.AnonymousAuthenticationFi
 import javax.sql.DataSource;
 
 
-/**
- * TODO Spring Security's terminology introduce
- * Authenticate: 动词：认证
- * Authentication: 名词：认证方式
- * Principal: 名词：主角，当前认证方式的主角，即用户
- * Credential: 名词：凭证，即密码等能证明身份的东西
- *
- * Authorize: 动词：授权
- * Authority: 名词：权限
- * Authorization: 名词：授权书，即已被授权的证明
- *
- * TODO spring security authenticate procedure
- * PseudoCode
- *      var auth = new Authentication();
- *      var authResult = AuthenticationManager.authenticate(auth); // 内部调用 AuthenticationProvider 执行实际认证过程
- *      SecurityContextHolder.getContext().setAuthentication(authResult​);
- *
- * 认证相关的类
- *  Authentication: 认证方式
- *  AuthenticationProvider: 对一种认证方式进行认证
- *  AuthenticationManager: 将 Authentication 用序列中的所有 Provider 进行认证
- *  SecurityContext: 安全上下文本身，用于保存 Authentication 和 请求权限验证，保存在 ThreadLocal 中
- *  SecurityContextHolder: 用于操作当前安全上下文
- *
- *  UserDetails: 用于表示用户，包含用户的信息，账号/密码/权限/角色等
- *  UserDetailsService: 用于提供 spring security 需要的 UserDetails
- *
- *  AbstractSecurityInterceptor: 拦截器，用于身份认证，鉴权
- *  ExceptionTranslationFilter: 异常转换过滤器，将 spring security 异常转换成 http 码返回给前端，仅 Web
- *  AuthenticationEntryPoint: 认证方式进入点，用于将未认证的用户引导到登陆界面，仅 Web
- *  SecurityContextPersistenceFilter: 用于保持登陆状态，每次请求都通过该类设置 SecurityContext 到 ThreadLocal 中，或者清理请求中的 SecurityContext
- *
- *
- * TODO spring security authorize procedure
- *
- * 鉴权相关的类
- *  GrantedAuthority: 权限
- *  AbstractSecurityInterceptor: 鉴权拦截器
- *
- *
-
- * TODO spring security fundamental classes
-
- *
-
- *
- *
- *
- * AccessDecisionManager: 鉴权过程类
- * AfterInvocationManager: 鉴权成功后调用的类
- * ConfigAttribute: 权限类
- * SecurityMetadataSource：用于配置  AbstractSecurityInterceptor
- * RoleVoter：投票者
- * RunAsManager: 相当于 linux 中的 sudo
- * PasswordEncoder：密码加密
- *
- *
- *
- * TODO What spring boot do when Spring Security's dependencies in classpath
+/** TODO Security Integrate into Boot
  * 1. 关闭 SecurityAutoConfiguration ：添加一个自定义的 WebSecurityConfigurerAdapter bean 到 IOC
  * 2. 关闭 UserDetailsServiceAutoConfiguration：
  *      添加一个自定义的 UserDetailsService, AuthenticationProvider, AuthenticationManager bean 到 IOC
- *
- *
- *
- * 创建一个名为  springSecurityFilterChain 的 Bean 放入到 ioc 容器中，且该 bean 时一个 servlet filter 实例，并绑定到所有 servlet 请求中
- * 创建一个类型为 UserDetailsService 的 bean 放入到 ioc 容器中，该 bean 中包含一个用户名为 user ，密码为一个随机数的用户
- *
- *
- *
  * */
-@Configuration // 当有一个自定义的 WebSecurityConfigurerAdapter 类型的 bean 存在于 IOC 容器中时，会关闭 SecurityAutoConfiguration 的自动配置
-@EnableWebSecurity // spring mvc 整合 spring security 必要的注解
-@Order(SecurityProperties.BASIC_AUTH_ORDER - 10) // 为当前自定义的过滤器链设置顺序
-public class CustomWebSecurityConfigurerAdapter extends WebSecurityConfigurerAdapter {
+//@Configuration
+/** TODO 指定 FilterChainProxy 内部 URL Pattern 匹配的过滤器链的顺序
+ * 因为 Boot 默认添加的兜底 URL Pattern ( /** ) 的顺序为 @Order(SecurityProperties.BASIC_AUTH_ORDER)
+ * 所以自己添加的 URL Pattern 的顺序要效于 /** , 即：高优先级
+ * */
+@Order(SecurityProperties.BASIC_AUTH_ORDER - 10) // 为 FilterChainProxy 内部过滤器链自定义的过滤器链设置顺序
+public class SecurityConfig2 extends WebSecurityConfigurerAdapter {
 
     /************************************ Authenticate Configuration *****************************************/
     /** TODO 覆盖 SpringBoot 自动配置的全局 AuthenticationManager，一般情况下不用配置，使用自动配置的即可 */
@@ -189,24 +127,43 @@ public class CustomWebSecurityConfigurerAdapter extends WebSecurityConfigurerAda
      * 2. 在 FilterRegistrationBean 中配置
      *
      * TODO Spring Security Filter
-     * Spring Security 只在 Servlet 容器中添加了一个过滤器，该过滤是 FilterChainProxy 的实例，并存放在 IOC 容器中
+     *      Spring Security 只在 Servlet 容器中添加了一个过滤器，该过滤器是 FilterChainProxy 的实例，并存放在 IOC 容器中，
+     *      Bean 名固定为 springSecurityFilterChain
+     *      Order 为 SecurityProperties.DEFAULT_FILTER_ORDER
      *
      * FilterChainProxy 内部包含多个过滤器链，每一个链匹配一个 URL 路径，每一个链包含多个 DelegatingFilterProxy 过滤器
-     * Spring Boot 默认添加 6 条过滤器，1-5 条匹配静态资源路径；最后一条匹配所有 URL 路径，用于处理 身份认证/权限管理/会话等操作
+     * Boot 一般默认添加 6 条过滤器，1-5 条匹配静态资源路径；
+     *      1. /css/**
+     *      2. /images/**
+     *      3. /error
+     *      ...
+     *      6. /**              最后一条匹配所有 URL 路径，用于处理 身份认证/权限管理/会话等操作，
+     *                          security.basic.enabled=false 关闭自动配置兜底 URL Pattern
      * */
-    //@Bean
-    @Order(Ordered.LOWEST_PRECEDENCE -10)
-    public CustomFilter customFilter(){
 
-        return new CustomFilter();
-    }
-
-    /** TODO 自定义过滤器链：
+    /** TODO 自定义 Security 过滤器链：
      * 添加一个 WebSecurityConfigurerAdapter 或 WebSecurityConfigurer 类型的 Bean 到 IOC 中
      * 每一组匹配都有一个独立的 WebSecurityConfigurerAdapter Bean
      * */
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+
+        // 配置可以匿名访问的路径
+        // http.antMatcher("/foo/**") // 会在 FilterChainProxy 过滤器中创建一个 /foo/** 的过滤器链，该过滤器链在 /** fallback 过滤器之前
+
+        ;
+
+        // 配置登陆界面
+        http.formLogin();
+
+        // 配置需要登陆后访问的路径
+        http.authorizeRequests()
+            // 配置需要额外授权的路径
+            .antMatchers("/h2-console/**").hasRole("ANONYMOUS") // 配置 /h2-console/** 允许匿名访问
+            .antMatchers("/**").hasRole("USER")  // 配置 /** 路径必须要登陆
+            .anyRequest().denyAll()  // 配置其他任何未配置的路径，都禁止访问
+        ;
+
 
         /** TODO 关闭对 h2 数据库控制台的 CSRF 保护
          * CSRF: Cross-site request forgery 跨站请求伪造
@@ -223,7 +180,6 @@ public class CustomWebSecurityConfigurerAdapter extends WebSecurityConfigurerAda
         /** TODO HTTP 协议重定向到 HTTPS 协议 */
         // http.requiresChannel(channel -> channel.anyRequest().requiresSecure());
 
-        http.authorizeRequests().antMatchers("/**").hasRole("USER").and().formLogin();
     }
 
 

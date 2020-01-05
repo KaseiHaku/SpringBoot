@@ -1,22 +1,69 @@
 package kasei.boot.security.controller;
 
+import kasei.boot.security.repository.h2.entity.User;
 import kasei.boot.security.utility.UniversalResponse;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.security.Principal;
 import java.util.Collection;
 
 
 @RestController
 @RequestMapping( path = "/Security", produces = {MediaType.APPLICATION_JSON_VALUE})
 public class SecurityController {
+
+
+    /** TODO 获取当前用户实例 */
+    @GetMapping("/currentUser")
+    public String currentUser(){
+        Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+
+        String username = null;
+        if (principal instanceof UserDetails) {
+            username = ((UserDetails)principal).getUsername();
+        } else {
+            username = principal.toString();
+        }
+        return username;
+    }
+
+    /** TODO 获取当前执行代码的主角实例
+     * 方法参数中有 Principal 类型时，Security 会自动注入
+     * */
+    @GetMapping("currentPrincipal")
+    public Principal currentPrincipal(Principal principal){
+        return principal;
+    }
+
+
+    @GetMapping("/test")
+    public String test(){
+        return "test";
+    }
+
+
+    /** TODO 获取当前的 Security 的 AuthenticationManager */
+    // @Autowired
+    // private AuthenticationManager authenticationManager;
+    // @GetMapping("/authenticationManager")
+    // public String authenticationManager(){
+    //     String typeName = authenticationManager.getClass().getTypeName();
+    //     return typeName;
+    // }
+
+
 
 
     /** TODO spring security authenticate procedure
@@ -67,6 +114,8 @@ public class SecurityController {
 
         return null;
     }
+
+
 
 
 
