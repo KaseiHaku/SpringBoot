@@ -2,6 +2,7 @@ package kasei.boot.security.repository.h2.entity;
 
 import lombok.Data;
 import org.hibernate.annotations.GenericGenerator;
+import org.springframework.security.core.GrantedAuthority;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -9,7 +10,7 @@ import java.util.Set;
 @Data
 @Entity
 @GenericGenerator(name = "jpa-uuid", strategy = "uuid")
-public class Role {
+public class Role implements GrantedAuthority {
 
     @Id
     @GeneratedValue(generator = "jpa-uuid")
@@ -29,7 +30,19 @@ public class Role {
     private Set<Action> actions;
 
     @ManyToMany
-    @JoinTable(name = "role_role", joinColumns = @JoinColumn(name = "group_role_id"), inverseJoinColumns = @JoinColumn(name="member_role_id"))
+    @JoinTable(name = "role_role", joinColumns = @JoinColumn(name = "parent_role_id"), inverseJoinColumns = @JoinColumn(name="child_role_id"))
     private Set<Role> roles;
+
+    @ManyToMany(mappedBy = "roles")
+    private Set<User> users;
+
+    @ManyToMany(mappedBy = "roles")
+    private Set<Group> groups;
+
+    @Override
+    public String getAuthority() {
+        return "ROLE_" + this.name;
+    }
+
 
 }

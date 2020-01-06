@@ -20,6 +20,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/SpringBoot.iml" filepath="$PROJECT_DIR$/.idea/SpringBoot.iml" group="SpringBoot" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringBoot_main.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringBoot_main.iml" group="SpringBoot" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringBoot_test.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringBoot_test.iml" group="SpringBoot" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Web/Web.iml" filepath="$PROJECT_DIR$/.idea/modules/Web/Web.iml" group="SpringBoot/Web" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Web/Web_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Web/Web_main.iml" group="SpringBoot/Web" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Web/Web_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Web/Web_test.iml" group="SpringBoot/Web" />
     </modules>
   </component>
 </project>

@@ -53,6 +53,10 @@ Spring Security's terminology introduce:
     Authority: 名词：权限
     Authorization: 名词：授权书，即已被授权的证明
 
+Security Core:
+    SecurityContextHolder: 用于操作 SecurityContext，SecurityContext 有几种模式，默认为 SecurityContextHolder.MODE_THREADLOCAL
+    UserDetails: Security 提供的适配器，用于适配系统中的 CustomUser
+
 
 Authenticate:
     Chief Interface:

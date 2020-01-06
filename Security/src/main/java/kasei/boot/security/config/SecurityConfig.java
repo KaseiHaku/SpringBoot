@@ -1,9 +1,13 @@
 package kasei.boot.security.config;
 
+import kasei.boot.security.repository.h2.dao.UserDao;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetailsService;
 
 import javax.sql.DataSource;
 
@@ -21,5 +25,17 @@ public class SecurityConfig  {
 
     // 参照 DaoAuthenticationProvider 写一个 Provider
 
+    // 当有一个自定义的 UserDetailsService 类型的 bean 存在于 IOC 容器中时，会关闭 UserDetailsServiceAutoConfiguration 的自动配置
+    @Autowired
+    private UserDao userDao;
+    @Bean
+    public UserDetailsService userDetailsService(){
+        return new MyUserDetailsService(userDao);
+    }
 
+    // 当有一个自定义的 AuthenticationProvider 类型的 bean 存在于 IOC 容器中时，会关闭 UserDetailsServiceAutoConfiguration 的自动配置
+    @Bean
+    public AuthenticationProvider authenticationProvider(){
+        return new MyAuthenticationProvider(this.userDetailsService());
+    }
 }

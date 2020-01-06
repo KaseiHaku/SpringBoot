@@ -1,4 +1,4 @@
-package kasei.boot.security.config.security;
+package kasei.boot.security.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationProvider;
@@ -11,13 +11,15 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
 
-
-//@Component // 当有一个自定义的 AuthenticationProvider 类型的 bean 存在于 IOC 容器中时，会关闭 UserDetailsServiceAutoConfiguration 的自动配置
-public class CustomAuthenticationProvider implements AuthenticationProvider {
+public class MyAuthenticationProvider implements AuthenticationProvider {
 
 
-    @Autowired
     private UserDetailsService userDetailsService;
+
+
+    public MyAuthenticationProvider(UserDetailsService userDetailsService) {
+        this.userDetailsService = userDetailsService;
+    }
 
     @Override
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {

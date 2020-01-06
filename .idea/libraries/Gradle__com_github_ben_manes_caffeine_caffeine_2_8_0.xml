@@ -1,11 +1,13 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.ben-manes.caffeine:caffeine:2.8.0">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../../../Gradle/LocalRepository/caches/modules-2/files-2.1/com.github.ben-manes.caffeine/caffeine/2.8.0/6000774d7f8412ced005a704188ced78beeed2bb/caffeine-2.8.0.jar!/" />
+      <root url="jar://E:/Gradle/LocalRepository/caches/modules-2/files-2.1/com.github.ben-manes.caffeine/caffeine/2.8.0/6000774d7f8412ced005a704188ced78beeed2bb/caffeine-2.8.0.jar!/" />
+      <root url="jar://E:/Gradle/GradleLocalRepository/caches/modules-2/files-2.1/com.github.ben-manes.caffeine/caffeine/2.8.0/6000774d7f8412ced005a704188ced78beeed2bb/caffeine-2.8.0.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$PROJECT_DIR$/../../../Gradle/LocalRepository/caches/modules-2/files-2.1/com.github.ben-manes.caffeine/caffeine/2.8.0/5982222a3ed33e30d7cf19d84a854bc6ab678d78/caffeine-2.8.0-sources.jar!/" />
+      <root url="jar://E:/Gradle/LocalRepository/caches/modules-2/files-2.1/com.github.ben-manes.caffeine/caffeine/2.8.0/5982222a3ed33e30d7cf19d84a854bc6ab678d78/caffeine-2.8.0-sources.jar!/" />
+      <root url="jar://E:/Gradle/GradleLocalRepository/caches/modules-2/files-2.1/com.github.ben-manes.caffeine/caffeine/2.8.0/5982222a3ed33e30d7cf19d84a854bc6ab678d78/caffeine-2.8.0-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

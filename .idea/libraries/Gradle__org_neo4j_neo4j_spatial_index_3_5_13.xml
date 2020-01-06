@@ -1,11 +1,13 @@
 <component name="libraryTable">
   <library name="Gradle: org.neo4j:neo4j-spatial-index:3.5.13">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../../../Gradle/LocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-spatial-index/3.5.13/553b978f0738ecf88972ef23fc98f62c334c2b33/neo4j-spatial-index-3.5.13.jar!/" />
+      <root url="jar://E:/Gradle/LocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-spatial-index/3.5.13/553b978f0738ecf88972ef23fc98f62c334c2b33/neo4j-spatial-index-3.5.13.jar!/" />
+      <root url="jar://E:/Gradle/GradleLocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-spatial-index/3.5.13/553b978f0738ecf88972ef23fc98f62c334c2b33/neo4j-spatial-index-3.5.13.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$PROJECT_DIR$/../../../Gradle/LocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-spatial-index/3.5.13/ec8e7bb8a8428c7c584a5b178f638eceba96cfeb/neo4j-spatial-index-3.5.13-sources.jar!/" />
+      <root url="jar://E:/Gradle/LocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-spatial-index/3.5.13/ec8e7bb8a8428c7c584a5b178f638eceba96cfeb/neo4j-spatial-index-3.5.13-sources.jar!/" />
+      <root url="jar://E:/Gradle/GradleLocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-spatial-index/3.5.13/ec8e7bb8a8428c7c584a5b178f638eceba96cfeb/neo4j-spatial-index-3.5.13-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

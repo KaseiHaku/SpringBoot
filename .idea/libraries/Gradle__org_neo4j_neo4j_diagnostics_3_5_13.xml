@@ -1,11 +1,13 @@
 <component name="libraryTable">
   <library name="Gradle: org.neo4j:neo4j-diagnostics:3.5.13">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../../../Gradle/LocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-diagnostics/3.5.13/2782ee8aa84b442c5bfa1518d124e31d290c358b/neo4j-diagnostics-3.5.13.jar!/" />
+      <root url="jar://E:/Gradle/LocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-diagnostics/3.5.13/2782ee8aa84b442c5bfa1518d124e31d290c358b/neo4j-diagnostics-3.5.13.jar!/" />
+      <root url="jar://E:/Gradle/GradleLocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-diagnostics/3.5.13/2782ee8aa84b442c5bfa1518d124e31d290c358b/neo4j-diagnostics-3.5.13.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$PROJECT_DIR$/../../../Gradle/LocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-diagnostics/3.5.13/bce58a7242f302f98c6b36773d54a0f4045b33df/neo4j-diagnostics-3.5.13-sources.jar!/" />
+      <root url="jar://E:/Gradle/LocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-diagnostics/3.5.13/bce58a7242f302f98c6b36773d54a0f4045b33df/neo4j-diagnostics-3.5.13-sources.jar!/" />
+      <root url="jar://E:/Gradle/GradleLocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-diagnostics/3.5.13/bce58a7242f302f98c6b36773d54a0f4045b33df/neo4j-diagnostics-3.5.13-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

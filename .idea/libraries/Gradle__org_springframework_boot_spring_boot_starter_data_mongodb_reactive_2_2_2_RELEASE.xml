@@ -1,11 +1,13 @@
 <component name="libraryTable">
   <library name="Gradle: org.springframework.boot:spring-boot-starter-data-mongodb-reactive:2.2.2.RELEASE">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../../../Gradle/LocalRepository/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-data-mongodb-reactive/2.2.2.RELEASE/921f72bd5001ea3b106df12437bb9f0a1ab3893a/spring-boot-starter-data-mongodb-reactive-2.2.2.RELEASE.jar!/" />
+      <root url="jar://E:/Gradle/LocalRepository/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-data-mongodb-reactive/2.2.2.RELEASE/921f72bd5001ea3b106df12437bb9f0a1ab3893a/spring-boot-starter-data-mongodb-reactive-2.2.2.RELEASE.jar!/" />
+      <root url="jar://E:/Gradle/GradleLocalRepository/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-data-mongodb-reactive/2.2.2.RELEASE/921f72bd5001ea3b106df12437bb9f0a1ab3893a/spring-boot-starter-data-mongodb-reactive-2.2.2.RELEASE.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$PROJECT_DIR$/../../../Gradle/LocalRepository/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-data-mongodb-reactive/2.2.2.RELEASE/ed6d25974e7b5602ebee867a2fd4def74bb189aa/spring-boot-starter-data-mongodb-reactive-2.2.2.RELEASE-sources.jar!/" />
+      <root url="jar://E:/Gradle/LocalRepository/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-data-mongodb-reactive/2.2.2.RELEASE/ed6d25974e7b5602ebee867a2fd4def74bb189aa/spring-boot-starter-data-mongodb-reactive-2.2.2.RELEASE-sources.jar!/" />
+      <root url="jar://E:/Gradle/GradleLocalRepository/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-data-mongodb-reactive/2.2.2.RELEASE/ed6d25974e7b5602ebee867a2fd4def74bb189aa/spring-boot-starter-data-mongodb-reactive-2.2.2.RELEASE-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

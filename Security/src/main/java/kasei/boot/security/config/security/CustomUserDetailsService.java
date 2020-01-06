@@ -16,7 +16,7 @@ import java.util.Set;
 
 
 // 参照 JdbcDaoImpl 重写
-@Component // 当有一个自定义的 UserDetailsService 类型的 bean 存在于 IOC 容器中时，会关闭 UserDetailsServiceAutoConfiguration 的自动配置
+@Component
 public class CustomUserDetailsService implements UserDetailsService {
 
     @Autowired private UserDao userDao;

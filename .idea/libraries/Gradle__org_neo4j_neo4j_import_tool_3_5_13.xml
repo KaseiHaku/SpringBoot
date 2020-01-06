@@ -1,11 +1,13 @@
 <component name="libraryTable">
   <library name="Gradle: org.neo4j:neo4j-import-tool:3.5.13">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../../../Gradle/LocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-import-tool/3.5.13/7c0b422e3ffac4dd07d22903127c06cfe313b1c5/neo4j-import-tool-3.5.13.jar!/" />
+      <root url="jar://E:/Gradle/LocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-import-tool/3.5.13/7c0b422e3ffac4dd07d22903127c06cfe313b1c5/neo4j-import-tool-3.5.13.jar!/" />
+      <root url="jar://E:/Gradle/GradleLocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-import-tool/3.5.13/7c0b422e3ffac4dd07d22903127c06cfe313b1c5/neo4j-import-tool-3.5.13.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$PROJECT_DIR$/../../../Gradle/LocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-import-tool/3.5.13/8c838797f506569310b795c5e3447011caf1d602/neo4j-import-tool-3.5.13-sources.jar!/" />
+      <root url="jar://E:/Gradle/LocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-import-tool/3.5.13/8c838797f506569310b795c5e3447011caf1d602/neo4j-import-tool-3.5.13-sources.jar!/" />
+      <root url="jar://E:/Gradle/GradleLocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-import-tool/3.5.13/8c838797f506569310b795c5e3447011caf1d602/neo4j-import-tool-3.5.13-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
