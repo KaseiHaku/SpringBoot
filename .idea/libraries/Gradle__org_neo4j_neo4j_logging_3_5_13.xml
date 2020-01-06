@@ -3,11 +3,13 @@
     <CLASSES>
       <root url="jar://E:/Gradle/LocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-logging/3.5.13/c169caac0d6acd89fc0d1de4fb711faaaf6059a9/neo4j-logging-3.5.13.jar!/" />
       <root url="jar://E:/Gradle/GradleLocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-logging/3.5.13/c169caac0d6acd89fc0d1de4fb711faaaf6059a9/neo4j-logging-3.5.13.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Gradle/LocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-logging/3.5.13/c169caac0d6acd89fc0d1de4fb711faaaf6059a9/neo4j-logging-3.5.13.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="jar://E:/Gradle/LocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-logging/3.5.13/9e9aa470c2aceb7d1c421ffc0b3deb380657d209/neo4j-logging-3.5.13-sources.jar!/" />
       <root url="jar://E:/Gradle/GradleLocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-logging/3.5.13/9e9aa470c2aceb7d1c421ffc0b3deb380657d209/neo4j-logging-3.5.13-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Gradle/LocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-logging/3.5.13/9e9aa470c2aceb7d1c421ffc0b3deb380657d209/neo4j-logging-3.5.13-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

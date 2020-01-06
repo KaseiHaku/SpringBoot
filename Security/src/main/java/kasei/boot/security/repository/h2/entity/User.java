@@ -1,5 +1,6 @@
 package kasei.boot.security.repository.h2.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
@@ -19,6 +20,7 @@ public class User implements UserDetails {
 
     @Id
     @Column(name="id", nullable = false, unique = true)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Integer id;
     @Column(length = 256, nullable = false, unique = true)
     private String account;
@@ -40,7 +42,11 @@ public class User implements UserDetails {
     @ManyToMany(mappedBy = "users", fetch = FetchType.EAGER)
     private Set<Group> groups;
 
+    @Transient // 表示当前字段不在数据库表中建列
+    private Set<? extends GrantedAuthority> authorities;
+
     @Override
+    //@JsonIgnore
     public Collection<? extends GrantedAuthority> getAuthorities() {
         Set<GrantedAuthority> authorities = new HashSet<>();
         authorities.addAll(actions);

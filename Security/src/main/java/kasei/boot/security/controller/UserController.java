@@ -4,17 +4,13 @@ import kasei.boot.security.repository.h2.dao.UserDao;
 import kasei.boot.security.repository.h2.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.*;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 
 @RestController
-@RequestMapping("/User")
+@RequestMapping(path = "/User", produces = {MediaType.APPLICATION_JSON_VALUE})
 public class UserController {
 
 
@@ -22,9 +18,16 @@ public class UserController {
     private UserDao userDao;
 
 
-    @GetMapping("/gg")
-    public List<User> gg(){
-        return userDao.gg();
+    @PostMapping
+    public List<User> batchInsertUser(@RequestBody Set<User> users){
+        List<User> dbUsers = userDao.saveAll(users);
+        return dbUsers;
+    }
+
+
+    @GetMapping
+    public List<User> getAllUser(){
+        return userDao.customGetAllUser();
     }
 
     @GetMapping("/id")

@@ -9,6 +9,7 @@ import java.util.Set;
 
 @Data
 @Entity
+@Table(name = "action")
 @GenericGenerator(name = "jpa-uuid", strategy = "uuid")
 public class Action implements GrantedAuthority {
 

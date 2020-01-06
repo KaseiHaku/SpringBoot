@@ -18,7 +18,7 @@ public class UserDaoImpl {
 
     @Autowired private JdbcTemplate jdbcTemplate;
 
-    public List<User> gg(){
+    public List<User> customGetAllUser(){
         RowMapper<User> rowMapper = new BeanPropertyRowMapper(User.class);
         List<User> query = jdbcTemplate.query("select * from user", rowMapper);
         return query;

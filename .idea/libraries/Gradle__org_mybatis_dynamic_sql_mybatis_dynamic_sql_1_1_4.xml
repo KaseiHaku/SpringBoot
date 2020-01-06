@@ -3,11 +3,13 @@
     <CLASSES>
       <root url="jar://E:/Gradle/LocalRepository/caches/modules-2/files-2.1/org.mybatis.dynamic-sql/mybatis-dynamic-sql/1.1.4/3f8f86b1b7047e27e0c0bce5d93c0dbaaf265f3f/mybatis-dynamic-sql-1.1.4.jar!/" />
       <root url="jar://E:/Gradle/GradleLocalRepository/caches/modules-2/files-2.1/org.mybatis.dynamic-sql/mybatis-dynamic-sql/1.1.4/3f8f86b1b7047e27e0c0bce5d93c0dbaaf265f3f/mybatis-dynamic-sql-1.1.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Gradle/LocalRepository/caches/modules-2/files-2.1/org.mybatis.dynamic-sql/mybatis-dynamic-sql/1.1.4/3f8f86b1b7047e27e0c0bce5d93c0dbaaf265f3f/mybatis-dynamic-sql-1.1.4.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="jar://E:/Gradle/LocalRepository/caches/modules-2/files-2.1/org.mybatis.dynamic-sql/mybatis-dynamic-sql/1.1.4/fd54948f95a37b629e0b06b48f8c2f7b179003b9/mybatis-dynamic-sql-1.1.4-sources.jar!/" />
       <root url="jar://E:/Gradle/GradleLocalRepository/caches/modules-2/files-2.1/org.mybatis.dynamic-sql/mybatis-dynamic-sql/1.1.4/fd54948f95a37b629e0b06b48f8c2f7b179003b9/mybatis-dynamic-sql-1.1.4-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Gradle/LocalRepository/caches/modules-2/files-2.1/org.mybatis.dynamic-sql/mybatis-dynamic-sql/1.1.4/fd54948f95a37b629e0b06b48f8c2f7b179003b9/mybatis-dynamic-sql-1.1.4-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

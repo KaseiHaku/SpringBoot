@@ -3,11 +3,13 @@
     <CLASSES>
       <root url="jar://E:/Gradle/LocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-consistency-check/3.5.13/daaf6195042d67b751c3c8acdd48ca0cdcbd4719/neo4j-consistency-check-3.5.13.jar!/" />
       <root url="jar://E:/Gradle/GradleLocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-consistency-check/3.5.13/daaf6195042d67b751c3c8acdd48ca0cdcbd4719/neo4j-consistency-check-3.5.13.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Gradle/LocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-consistency-check/3.5.13/daaf6195042d67b751c3c8acdd48ca0cdcbd4719/neo4j-consistency-check-3.5.13.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="jar://E:/Gradle/LocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-consistency-check/3.5.13/51720368f9e1c67bf5d4eb54731bbc0d02734f58/neo4j-consistency-check-3.5.13-sources.jar!/" />
       <root url="jar://E:/Gradle/GradleLocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-consistency-check/3.5.13/51720368f9e1c67bf5d4eb54731bbc0d02734f58/neo4j-consistency-check-3.5.13-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Gradle/LocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-consistency-check/3.5.13/51720368f9e1c67bf5d4eb54731bbc0d02734f58/neo4j-consistency-check-3.5.13-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

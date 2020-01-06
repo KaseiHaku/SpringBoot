@@ -3,11 +3,13 @@
     <CLASSES>
       <root url="jar://E:/Gradle/LocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-fulltext-index/3.5.13/9785ffbb4f1b35e33f4cca3cddde578567c44de0/neo4j-fulltext-index-3.5.13.jar!/" />
       <root url="jar://E:/Gradle/GradleLocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-fulltext-index/3.5.13/9785ffbb4f1b35e33f4cca3cddde578567c44de0/neo4j-fulltext-index-3.5.13.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Gradle/LocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-fulltext-index/3.5.13/9785ffbb4f1b35e33f4cca3cddde578567c44de0/neo4j-fulltext-index-3.5.13.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="jar://E:/Gradle/LocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-fulltext-index/3.5.13/231748c9a97077be9f8d4b5e839203803ebea8c9/neo4j-fulltext-index-3.5.13-sources.jar!/" />
       <root url="jar://E:/Gradle/GradleLocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-fulltext-index/3.5.13/231748c9a97077be9f8d4b5e839203803ebea8c9/neo4j-fulltext-index-3.5.13-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Gradle/LocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-fulltext-index/3.5.13/231748c9a97077be9f8d4b5e839203803ebea8c9/neo4j-fulltext-index-3.5.13-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

@@ -3,11 +3,13 @@
     <CLASSES>
       <root url="jar://E:/Gradle/LocalRepository/caches/modules-2/files-2.1/org.neo4j.licensing-proxy/zstd-proxy/3.5.13/50036110d7183d021d65e9d30e08f6ac7b4740a9/zstd-proxy-3.5.13.jar!/" />
       <root url="jar://E:/Gradle/GradleLocalRepository/caches/modules-2/files-2.1/org.neo4j.licensing-proxy/zstd-proxy/3.5.13/50036110d7183d021d65e9d30e08f6ac7b4740a9/zstd-proxy-3.5.13.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Gradle/LocalRepository/caches/modules-2/files-2.1/org.neo4j.licensing-proxy/zstd-proxy/3.5.13/50036110d7183d021d65e9d30e08f6ac7b4740a9/zstd-proxy-3.5.13.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="jar://E:/Gradle/LocalRepository/caches/modules-2/files-2.1/org.neo4j.licensing-proxy/zstd-proxy/3.5.13/5dbf6931e769e1074a3a5607082a740017117a76/zstd-proxy-3.5.13-sources.jar!/" />
       <root url="jar://E:/Gradle/GradleLocalRepository/caches/modules-2/files-2.1/org.neo4j.licensing-proxy/zstd-proxy/3.5.13/5dbf6931e769e1074a3a5607082a740017117a76/zstd-proxy-3.5.13-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Gradle/LocalRepository/caches/modules-2/files-2.1/org.neo4j.licensing-proxy/zstd-proxy/3.5.13/5dbf6931e769e1074a3a5607082a740017117a76/zstd-proxy-3.5.13-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

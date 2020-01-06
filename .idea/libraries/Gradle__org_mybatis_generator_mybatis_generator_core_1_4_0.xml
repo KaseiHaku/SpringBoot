@@ -3,11 +3,13 @@
     <CLASSES>
       <root url="jar://E:/Gradle/LocalRepository/caches/modules-2/files-2.1/org.mybatis.generator/mybatis-generator-core/1.4.0/d4f70e1ebfb057baecf1491d142920e1c8106f00/mybatis-generator-core-1.4.0.jar!/" />
       <root url="jar://E:/Gradle/GradleLocalRepository/caches/modules-2/files-2.1/org.mybatis.generator/mybatis-generator-core/1.4.0/d4f70e1ebfb057baecf1491d142920e1c8106f00/mybatis-generator-core-1.4.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Gradle/LocalRepository/caches/modules-2/files-2.1/org.mybatis.generator/mybatis-generator-core/1.4.0/d4f70e1ebfb057baecf1491d142920e1c8106f00/mybatis-generator-core-1.4.0.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="jar://E:/Gradle/LocalRepository/caches/modules-2/files-2.1/org.mybatis.generator/mybatis-generator-core/1.4.0/8bc014cd1e3e40fd6668d9447f0d6113f638999b/mybatis-generator-core-1.4.0-sources.jar!/" />
       <root url="jar://E:/Gradle/GradleLocalRepository/caches/modules-2/files-2.1/org.mybatis.generator/mybatis-generator-core/1.4.0/8bc014cd1e3e40fd6668d9447f0d6113f638999b/mybatis-generator-core-1.4.0-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Gradle/LocalRepository/caches/modules-2/files-2.1/org.mybatis.generator/mybatis-generator-core/1.4.0/8bc014cd1e3e40fd6668d9447f0d6113f638999b/mybatis-generator-core-1.4.0-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

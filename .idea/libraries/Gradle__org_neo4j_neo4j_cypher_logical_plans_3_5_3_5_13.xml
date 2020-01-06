@@ -3,11 +3,13 @@
     <CLASSES>
       <root url="jar://E:/Gradle/LocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-cypher-logical-plans-3.5/3.5.13/66e58e28eaccbcc4f0b7a8e968170007e25531e7/neo4j-cypher-logical-plans-3.5-3.5.13.jar!/" />
       <root url="jar://E:/Gradle/GradleLocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-cypher-logical-plans-3.5/3.5.13/66e58e28eaccbcc4f0b7a8e968170007e25531e7/neo4j-cypher-logical-plans-3.5-3.5.13.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Gradle/LocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-cypher-logical-plans-3.5/3.5.13/66e58e28eaccbcc4f0b7a8e968170007e25531e7/neo4j-cypher-logical-plans-3.5-3.5.13.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="jar://E:/Gradle/LocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-cypher-logical-plans-3.5/3.5.13/5fdf6bfb537a1aa5edf897d5701ae537b4b3f4f6/neo4j-cypher-logical-plans-3.5-3.5.13-sources.jar!/" />
       <root url="jar://E:/Gradle/GradleLocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-cypher-logical-plans-3.5/3.5.13/5fdf6bfb537a1aa5edf897d5701ae537b4b3f4f6/neo4j-cypher-logical-plans-3.5-3.5.13-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Gradle/LocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-cypher-logical-plans-3.5/3.5.13/5fdf6bfb537a1aa5edf897d5701ae537b4b3f4f6/neo4j-cypher-logical-plans-3.5-3.5.13-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

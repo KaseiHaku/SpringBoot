@@ -8,6 +8,8 @@ import java.util.Set;
 
 @Data
 @Entity
+/** TODO @Trap 表明不能跟关键字冲突，否则不能自动创建 */
+@Table(name = "resource")
 @GenericGenerator(name = "jpa-uuid", strategy = "uuid")
 public class Resource {
     @Id

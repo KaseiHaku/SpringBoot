@@ -3,11 +3,13 @@
     <CLASSES>
       <root url="jar://E:/Gradle/LocalRepository/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-data-redis-reactive/2.2.2.RELEASE/c169ad9feb916f2999a799abc8f5ac253d8ddf4f/spring-boot-starter-data-redis-reactive-2.2.2.RELEASE.jar!/" />
       <root url="jar://E:/Gradle/GradleLocalRepository/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-data-redis-reactive/2.2.2.RELEASE/c169ad9feb916f2999a799abc8f5ac253d8ddf4f/spring-boot-starter-data-redis-reactive-2.2.2.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Gradle/LocalRepository/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-data-redis-reactive/2.2.2.RELEASE/c169ad9feb916f2999a799abc8f5ac253d8ddf4f/spring-boot-starter-data-redis-reactive-2.2.2.RELEASE.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="jar://E:/Gradle/LocalRepository/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-data-redis-reactive/2.2.2.RELEASE/ee4682b2c8a18d96c4d151cf48a7ef05679e51aa/spring-boot-starter-data-redis-reactive-2.2.2.RELEASE-sources.jar!/" />
       <root url="jar://E:/Gradle/GradleLocalRepository/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-data-redis-reactive/2.2.2.RELEASE/ee4682b2c8a18d96c4d151cf48a7ef05679e51aa/spring-boot-starter-data-redis-reactive-2.2.2.RELEASE-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Gradle/LocalRepository/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-data-redis-reactive/2.2.2.RELEASE/ee4682b2c8a18d96c4d151cf48a7ef05679e51aa/spring-boot-starter-data-redis-reactive-2.2.2.RELEASE-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

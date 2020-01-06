@@ -9,6 +9,7 @@ import java.util.Set;
 
 @Data
 @Entity
+@Table(name = "role")
 @GenericGenerator(name = "jpa-uuid", strategy = "uuid")
 public class Role implements GrantedAuthority {
 

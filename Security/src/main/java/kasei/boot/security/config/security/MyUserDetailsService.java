@@ -1,9 +1,10 @@
-package kasei.boot.security.config;
+package kasei.boot.security.config.security;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.json.JsonMapper;
 import kasei.boot.security.repository.h2.dao.UserDao;
+import kasei.boot.security.repository.h2.entity.Role;
 import kasei.boot.security.repository.h2.entity.User;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

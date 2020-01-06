@@ -3,11 +3,13 @@
     <CLASSES>
       <root url="jar://E:/Gradle/LocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-parser-3.5/3.5.13/313e4413598e0be3899486ff44ba2f2079236dbf/neo4j-parser-3.5-3.5.13.jar!/" />
       <root url="jar://E:/Gradle/GradleLocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-parser-3.5/3.5.13/313e4413598e0be3899486ff44ba2f2079236dbf/neo4j-parser-3.5-3.5.13.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Gradle/LocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-parser-3.5/3.5.13/313e4413598e0be3899486ff44ba2f2079236dbf/neo4j-parser-3.5-3.5.13.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="jar://E:/Gradle/LocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-parser-3.5/3.5.13/24d457bfa71d8009948165eb491076df631b5602/neo4j-parser-3.5-3.5.13-sources.jar!/" />
       <root url="jar://E:/Gradle/GradleLocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-parser-3.5/3.5.13/24d457bfa71d8009948165eb491076df631b5602/neo4j-parser-3.5-3.5.13-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Gradle/LocalRepository/caches/modules-2/files-2.1/org.neo4j/neo4j-parser-3.5/3.5.13/24d457bfa71d8009948165eb491076df631b5602/neo4j-parser-3.5-3.5.13-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

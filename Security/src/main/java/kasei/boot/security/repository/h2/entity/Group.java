@@ -10,6 +10,7 @@ import java.util.Set;
 
 @Data
 @Entity
+@Table(name = "groups") // 表明不能跟关键字冲突，否则不能自动创建
 @GenericGenerator(name = "jpa-uuid", strategy = "uuid")
 public class Group implements GrantedAuthority {
 
