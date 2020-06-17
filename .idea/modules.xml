@@ -14,7 +14,6 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Redis/Redis.iml" filepath="$PROJECT_DIR$/.idea/modules/Redis/Redis.iml" group="SpringBoot/Redis" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Redis/Redis_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Redis/Redis_main.iml" group="SpringBoot/Redis" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Redis/Redis_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Redis/Redis_test.iml" group="SpringBoot/Redis" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Security/Security.iml" filepath="$PROJECT_DIR$/.idea/modules/Security/Security.iml" group="SpringBoot/Security" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Security/Security_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Security/Security_main.iml" group="SpringBoot/Security" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Security/Security_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Security/Security_test.iml" group="SpringBoot/Security" />
       <module fileurl="file://$PROJECT_DIR$/.idea/SpringBoot.iml" filepath="$PROJECT_DIR$/.idea/SpringBoot.iml" group="SpringBoot" />
