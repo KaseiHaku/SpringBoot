@@ -2,9 +2,3 @@
 rootProject.name = 'SpringBoot'
 
 
-include 'Security'
-include 'Mybatis'
-include 'Redis'
-include 'Mongo'
-include 'Neo4j'
-

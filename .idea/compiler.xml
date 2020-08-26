@@ -8,19 +8,25 @@
         <processorPath useClasspath="false">
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.10/625fc0055674dff70dbc76efa36d0f2c89b04a24/lombok-1.18.10.jar" />
         </processorPath>
-        <module name="SpringBoot.Redis.main" />
-        <module name="SpringBoot.Mybatis.main" />
-        <module name="SpringBoot.Security.main" />
         <module name="SpringBoot.main" />
-        <module name="SpringBoot.Mongo.main" />
-        <module name="SpringBoot.Neo4j.main" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="SpringBoot.Mongo" target="11" />
+      <module name="SpringBoot.Mongo.main" target="11" />
+      <module name="SpringBoot.Mongo.test" target="11" />
       <module name="SpringBoot.Mybatis" target="11" />
+      <module name="SpringBoot.Mybatis.main" target="11" />
+      <module name="SpringBoot.Mybatis.test" target="11" />
       <module name="SpringBoot.Neo4j" target="11" />
+      <module name="SpringBoot.Neo4j.main" target="11" />
+      <module name="SpringBoot.Neo4j.test" target="11" />
       <module name="SpringBoot.Redis" target="11" />
+      <module name="SpringBoot.Redis.main" target="11" />
+      <module name="SpringBoot.Redis.test" target="11" />
+      <module name="SpringBoot.Security" target="11" />
+      <module name="SpringBoot.Security.main" target="11" />
+      <module name="SpringBoot.Security.test" target="11" />
       <module name="Web_main" target="11" />
       <module name="Web_test" target="11" />
     </bytecodeTargetLevel>

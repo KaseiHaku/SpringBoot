@@ -9,11 +9,6 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/Mongo" />
-            <option value="$PROJECT_DIR$/Mybatis" />
-            <option value="$PROJECT_DIR$/Neo4j" />
-            <option value="$PROJECT_DIR$/Redis" />
-            <option value="$PROJECT_DIR$/Security" />
           </set>
         </option>
         <option name="useQualifiedModuleNames" value="true" />
