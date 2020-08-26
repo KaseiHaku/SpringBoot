@@ -1,8 +1,0 @@
-# spring 中所有配置文件，命令行参数等信息，都可以通过 Environment 类来获取，或者通过 @ConfigurationProperties 注解来获取
-# yml 不能使用 @PropertySource 引入属性，只能用 .properties 文件
-spring:
-  application:
-    name: SpringBootMybatis
-    description: ${spring.application.name} is my spring boot study project
-  profiles:
-    active: home

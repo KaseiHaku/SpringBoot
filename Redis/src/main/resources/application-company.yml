@@ -1,7 +1,0 @@
-server:
-  port: 8088
-spring:
-  datasource:
-    redis:
-      server: 10.98.0.92
-      port: 6379

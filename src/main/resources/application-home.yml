@@ -83,6 +83,8 @@ spring:
   data:
     neo4j:
       uri: file:///opt/Git/LocalRepository/SpringBoot/src/main/resources/embededdatabase/neo4j/graph.db
+    mongodb:
+      uri: mongodb://springcloudRoot:springcloudRoot@127.0.0.1:27017/springcloud
   h2:
     console:
       enabled: true
@@ -91,3 +93,4 @@ spring:
 #    admin:
 #      client-id:
 #    bootstrap-servers:
+

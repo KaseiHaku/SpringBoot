@@ -1,7 +1,0 @@
-spring:
-  application:
-    name: SpringBootMongo
-    description: ${spring.application.name} is my spring boot study project
-  profiles:
-    active: home
-

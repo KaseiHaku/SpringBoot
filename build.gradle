@@ -78,11 +78,36 @@ allprojects {
         /** TODO Persistence */
         implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa'
 
-        
+        /** TODO Redis */
+        implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-redis-reactive'
+        implementation group: 'org.apache.commons', name: 'commons-pool2', version: '2.7.0'
 
-        
 
-        
+        /** TODO Neo4j */
+        implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-neo4j'
+        implementation group: 'org.neo4j', name: 'neo4j-ogm-embedded-driver', version: '3.2.3' // 该依赖存在时 spring boot 自动创建一个 neo4j 实例保存到 IOC 容器中
+        implementation group: 'org.neo4j', name: 'neo4j', version: '3.5.13' // neo4j 嵌入式数据库
+        implementation group: 'org.neo4j.driver', name: 'neo4j-java-driver-spring-boot-starter', version: '4.0.0'
+
+        /** TODO Local Dependency */
+        implementation fileTree(dir:'lib', excludes:['**/ignore/**', '**/data/**'])
+
+        /** TODO Spring Boot */
+        implementation group: 'org.springframework.boot', name: 'spring-boot-starter-jdbc'
+
+        /** TODO ORM */
+        implementation group: 'org.mybatis.spring.boot', name: 'mybatis-spring-boot-starter', version: '2.1.1'
+        implementation group: 'org.mybatis', name: 'mybatis', version: '3.5.3'
+        implementation group: 'org.mybatis.dynamic-sql', name: 'mybatis-dynamic-sql', version: '1.1.4'
+        implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.18'
+
+        /** TODO Convenient Develop */
+        runtimeOnly group: 'org.mybatis.generator', name: 'mybatis-generator-core', version: '1.4.0' // mybatis 自动根据数据库表生成代码
+
+        /** TODO Mongo */
+        implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-mongodb'
+        implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-mongodb-reactive'
+        implementation group: 'org.mongodb', name: 'mongo-java-driver'
     }
 
 
