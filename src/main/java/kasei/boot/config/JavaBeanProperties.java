@@ -1,4 +1,4 @@
-package kasei.boot.app;
+package kasei.boot.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;

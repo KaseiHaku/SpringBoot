@@ -1,4 +1,4 @@
-package kasei.boot.app.listener;
+package kasei.boot.config.listener;
 
 import org.springframework.context.ApplicationEvent;
 import org.springframework.context.ApplicationListener;

@@ -1,8 +1,8 @@
 package kasei.boot;
 
 
-import kasei.boot.app.MyExitCodeGenerator;
-import kasei.boot.app.listener.CustomApplicationListener;
+import kasei.boot.config.MyExitCodeGenerator;
+import kasei.boot.config.listener.CustomApplicationListener;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;

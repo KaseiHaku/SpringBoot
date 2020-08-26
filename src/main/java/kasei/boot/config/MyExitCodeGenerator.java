@@ -1,4 +1,4 @@
-package kasei.boot.app;
+package kasei.boot.config;
 
 import org.springframework.boot.ExitCodeGenerator;
 import org.springframework.stereotype.Component;

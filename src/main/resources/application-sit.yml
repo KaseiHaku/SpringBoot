@@ -80,6 +80,15 @@ spring:
       username: kasei
       password: kasei
       driver-class-name: org.h2.Driver
+    mongo:
+      uri: mongodb://springcloud:springcloud@10.98.0.92:27017/springcloud
+      neo4j:
+        url: bolt://localhost:7687
+        username: neo4j
+        password: root
+        connection:
+          pool:
+            size: 150
   data:
     neo4j:
       uri: file:///opt/Git/LocalRepository/SpringBoot/src/main/resources/embededdatabase/neo4j/graph.db
