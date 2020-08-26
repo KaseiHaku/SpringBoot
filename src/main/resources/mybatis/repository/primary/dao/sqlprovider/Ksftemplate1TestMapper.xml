@@ -69,7 +69,7 @@
   <sql id="Base_Column_List">
     WF_ORUNID, NAME, AGE
   </sql>
-  <select id="selectByExample" parameterType="kasei.springboot.repository.primary.dao.example.Ksftemplate1TestExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="kasei.boot.repository.primary.dao.example.Ksftemplate1TestExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -93,7 +93,7 @@
     delete from KSFTEMPLATE1_TEST
     where WF_ORUNID = #{wfOrunid,jdbcType=VARCHAR}
   </delete>
-  <delete id="deleteByExample" parameterType="kasei.springboot.repository.primary.dao.example.Ksftemplate1TestExample">
+  <delete id="deleteByExample" parameterType="kasei.boot.repository.primary.dao.example.Ksftemplate1TestExample">
     delete from KSFTEMPLATE1_TEST
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -130,7 +130,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="kasei.springboot.repository.primary.dao.example.Ksftemplate1TestExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="kasei.boot.repository.primary.dao.example.Ksftemplate1TestExample" resultType="java.lang.Long">
     select count(*) from KSFTEMPLATE1_TEST
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
